@@ -6,7 +6,6 @@
     margin: 0;
 }
 
-
 /*define website background*/
 
 body {
@@ -45,7 +44,7 @@ h2 {
 /* set font for paragraphs */
 p {
     font-family: Anuphan;
-    font-size: 20px;
+    font-size: 25px;
     color: white;
 }
 
@@ -73,7 +72,6 @@ display: none;
     justify-content: center;
     box-shadow: 1px 1px 6px #000;
 }
-
 
 .navbar__elements ul {
 padding: 0px;
