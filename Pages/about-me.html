@@ -1,97 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="../Styles/styles.css">
-    <link rel="shortcut icon" href="./Src/Images/favicon.ico" type="image/x-icon">
-    <title>Storm creations - about me</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../Styles/styles.css">
+  <link rel="shortcut icon" href="./Src/Images/favicon.ico" type="image/x-icon">
+  <title>Storm creations - about me</title>
 </head>
 
 <body>
-  
-   <!-- Navbar Desktop-->
-   <header>
-    <div class="navbar__container"> 
-       <nav class="navbar__elements">
+
+  <!-- Navbar Desktop-->
+  <header>
+    <div class="navbar__container">
+      <nav class="navbar__elements">
         <ul>
-            <li><a href="../index.html"> Home </a></li>
-            <li><a href="../Pages/projects.html"> Projects </a></li>
-            <li><a href="../Pages/about-me.html"> About me </a></li>
-            <li><a href="../Pages/blog.html"> Blog </a></li>
-            <li><a href="../Pages/contact.html"> Contact </a></li>
+          <li><a href="../index.html"> Home </a></li>
+          <li><a href="../Pages/projects.html"> Projects </a></li>
+          <li><a href="../Pages/about-me.html"> About me </a></li>
+          <li><a href="../Pages/blog.html"> Blog </a></li>
+          <li><a href="../Pages/contact.html"> Contact </a></li>
         </ul>
-       </nav>
+      </nav>
     </div>
 
     <!-- Mobile Navbar -->
     <nav class="navbar__mobile-container">
-     <img class="navbar__mobile-burgerMenu" src="../Src/Images/Dummy image.png" alt="">
+      <img class="navbar__mobile-burgerMenu" src="../Src/Images/Dummy image.png" alt="">
 
     </nav>
-      <!-- main div's -->
-      <section>
-          <div class="hero__container-title">
-              <h1>About me</h1>
-          </div>
-        </section>
-      </header>
+    <!-- main div's -->
+    <section>
+      <div class="hero__container-title">
+        <h1>About me</h1>
+      </div>
+    </section>
+  </header>
+
+
+  <main>
+
+    <!-- profile description section, no bootstrap -->
+
+<!--
+    <section>
+      <div class="profile__container">
+
+        <div class="profile__container-image">
+          <img src="../Src/Images/profile-picture.png" alt="profile picture">
+        </div>
+
+        <div class="profile__description-div">
+          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tempora architecto blanditiis atque ducimus
+            natus, qui dignissimos repellendus maiores quaerat minima. Totam ipsum quaerat vel error maiores. Nam,
+            voluptas distinctio!</p>
   
-
-    <main>
-      <div class="divider"> </div>
-      
-      <!-- section 1 -->
-      <section class="leftAligned__section">
-        
-        <h2 id="name"> Luis Felipe Velasquez Garcia </h2>
-        <div class="profile__div">
-          <img src="../Src/Images/profile-picture.png" alt="profile picture"> 
-       
-          <div class="profile__description-div"> 
-            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta tempora architecto blanditiis atque ducimus natus, qui dignissimos repellendus maiores quaerat minima. Totam ipsum quaerat vel error maiores. Nam, voluptas distinctio!</p>
-
-            <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis officia cum dolores ut expedita quaerat eveniet explicabo doloremque harum maxime quos ab, facere voluptas tenetur qui dignissimos blanditiis aliquid laborum.</p>
-        </div>
         </div>
 
-      
-      
-      </section>
-
-      <div class="divider"> </div>
-
-      <div class="about__grid">
-       
-        <img src="../Src/Images/Dummy image.png" alt="interest picture">
-        <img src="../Src/Images/Dummy image.png" alt="interest picture">
-       
       </div>
 
-      <section id="info__paragraph">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat a, deleniti magnam aspernatur eveniet alias, consequatur placeat cum distinctio unde mollitia, temporibus iste obcaecati illo tempore eaque odit labore aut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus labore ipsam doloremque eum non, facere sequi laboriosam, nihil ab, ratione nobis quia id veritatis inventore deserunt aspernatur blanditiis earum odit.</p>
-      </section>
+    </section>
 
-      <div class="divider"> </div>
+  -->
 
-      <div class="about__grid">
-      
-           <img src="../Src/Images/Dummy image.png" alt="interest picture">
+    <div class="divider"> </div>
+
+    
+    <div class="leftAligned__text">
+      <h2 id="name"> My profile </h2>
+    </div>
+
+    <!-- bootstrap profile description container -->
+    <section class="container text-center">
+      <div class="row mt-5 mb-5">
+        <div class="col-md mt-5">
+            <img src="../Src/Images/profile-picture.png" class="img-fluid rounded-5 p-4 mb-3 " alt="profile picture">
+     
+        </div>
+        <div class="col-md-6 offset-md-2 align-self-center">
+          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis officia cum dolores ut expedita quaerat
+            eveniet explicabo doloremque harum maxime quos ab, facere voluptas tenetur qui dignissimos blanditiis
+            aliquid laborum.</p>
+
+          <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis officia cum dolores ut expedita quaerat
+            eveniet explicabo doloremque harum maxime quos ab, facere voluptas tenetur qui dignissimos blanditiis
+            aliquid laborum.</p>
+        </div>
       </div>
+    </section>
 
-      <section id="info__paragraph">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat a, deleniti magnam aspernatur eveniet alias, consequatur placeat cum distinctio unde mollitia, temporibus iste obcaecati illo tempore eaque odit labore aut. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus labore ipsam doloremque eum non, facere sequi laboriosam, nihil ab, ratione nobis quia id veritatis inventore deserunt aspernatur blanditiis earum odit.</p>
-      </section>
-    </main>
+   
+    <div class="divider"></div>
 
-    <footer>
-      <div class="divider"> </div>
-      <div class="footer"> 
-        <div id="footer__edge"></div>
-        <H2>Footer</H2>
-      </div>
-    </footer>
+    <section class="about__grid">
+      <img src="../Src/Images/Dummy image.png" alt="interest picture">
+      <img src="../Src/Images/Dummy image.png" alt="interest picture">
+    </section>
+
+    <section id="info__paragraph">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat a, deleniti magnam aspernatur eveniet alias,
+        consequatur placeat cum distinctio unde mollitia, temporibus iste obcaecati illo tempore eaque odit labore aut.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus labore ipsam doloremque eum non, facere sequi
+        laboriosam, nihil ab, ratione nobis quia id veritatis inventore deserunt aspernatur blanditiis earum odit.</p>
+    </section>
+
+    <div class="divider"> </div>
+
+    <div class="about__grid">
+
+      <img src="../Src/Images/Dummy image.png" alt="interest picture">
+    </div>
+
+    <section id="info__paragraph">
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat a, deleniti magnam aspernatur eveniet alias,
+        consequatur placeat cum distinctio unde mollitia, temporibus iste obcaecati illo tempore eaque odit labore aut.
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Possimus labore ipsam doloremque eum non, facere sequi
+        laboriosam, nihil ab, ratione nobis quia id veritatis inventore deserunt aspernatur blanditiis earum odit.</p>
+    </section>
+
+    
+  </main>
+
+  <footer>
+    <div class="divider"> </div>
+    <div class="footer">
+      <div id="footer__edge"></div>
+      <H2>Footer</H2>
+    </div>
+  </footer>
 
 </body>
+
 </html>

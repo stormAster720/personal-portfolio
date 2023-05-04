@@ -1,112 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="./Styles/styles.css">
-    <link rel="shortcut icon" href="./Src/Images/favicon.ico" type="image/x-icon">
-    <title>Storm creations portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="./Styles/styles.css">
+  <link rel="shortcut icon" href="./Src/Images/favicon.ico" type="image/x-icon">
+  <title>Storm creations portfolio</title>
 </head>
 
 <body>
-   <!-- Navbar Desktop-->
-   <header>
-    <div class="navbar__container"> 
-       <nav class="navbar__elements">
+  <!-- Navbar Desktop-->
+  <header>
+    <div class="navbar__container">
+      <nav class="navbar__elements">
         <ul>
-            <li><a href="./index.html"> Home </a></li>
-            <li><a href="./Pages/projects.html"> Projects </a></li>
-            <li><a href="./Pages/about-me.html"> About me </a></li>
-            <li><a href="./Pages/blog.html"> Blog </a></li>
-            <li><a href="./Pages/contact.html"> Contact </a></li>
+          <li><a href="./index.html"> Home </a></li>
+          <li><a href="./Pages/projects.html"> Projects </a></li>
+          <li><a href="./Pages/about-me.html"> About me </a></li>
+          <li><a href="./Pages/blog.html"> Blog </a></li>
+          <li><a href="./Pages/contact.html"> Contact </a></li>
         </ul>
-       </nav>
+      </nav>
     </div>
 
     <!-- Mobile Navbar -->
     <nav class="navbar__mobile-container">
-     <img class="navbar__mobile-burgerMenu" src="../Src/Images/Dummy image.png" alt="">
+      <img class="navbar__mobile-burgerMenu" src="../Src/Images/Dummy image.png" alt="">
 
     </nav>
 
     <!-- Hero -->
     <section>
-        <div class="hero__container">
-          <div class="hero__logo-container">
-            <a href="./index.html"><img src="./Src/Images/Logos/Dummy logo.png" alt="site logo"></a> 
-            <h1>Web developer & <br> Game developer <span>Generalist </span></h1>
+      <div class="hero__container">
+        <div class="hero__logo-container">
+          <a href="./index.html"><img src="./Src/Images/Logos/Dummy logo.png" alt="site logo"></a>
+          <h1 class="text-center mb-5">Web developer & <br> Game developer <span>Generalist </span></h1>
+        </div>
+
+        <!--side image carousel-->
+        <div class="hero__container-sideImage-container">
+          <div class="carousel slide h-100" data-bs-ride="carousel">
+            <div class="carousel-inner h-100">
+
+              <div class="carousel-item active h-100">
+                <img src="./Src/Images/Dummy image.png" class="h-100 w-100" alt="...">
+              </div>
+              <div class="carousel-item h-100">
+                <img src="./Src/Images/profile-picture.png" class="h-100 w-100" alt="...">
+              </div>
+            </div>
           </div>
+        </div>
 
-      <div class="hero__container-sideImage-container">
-      
       </div>
-        </div>
-      </section>
-    </header>
-   
-    <main>
-        <div class="divider"> </div>
-      <section class="centered__container-text">
-        <h2>Welcome</h2>
-        <p>Hello there newcomer, welcome to my personal website and blog, here you will be able to take a look at my current portfolio projects and also you will know a bit more about me. I also have a blog here where I post game development and web development content regularly.</p>
-      </section>
+    </section>
+  </header>
 
-<div class="divider"> </div>
+  <!-- content -->
+  <main>
+    <div class="divider"> </div>
+    <section class="centered__container-text">
+      <h2>Welcome</h2>
+      <p>Hello there newcomer, welcome to my personal website and blog, here you will be able to take a look at my
+        current
+        portfolio projects and also you will know a bit more about me. I also have a blog here where I post game
+        development and web development content regularly.</p>
+    </section>
 
-      <!-- Skills section -->
-      <section class="leftAligned__section">
-        <h2> Who am I? </h2>
-      </section>
-        
-      <section class="centered__container-text">
-        <p> I am a hobbiest game developer with over 6+ years of experience on the subject aimed to provide amazing 3D experiences mainly for desktop platforms using the latest
-           technologies available on the market, specially those that can be considered revolutionary;
-           In addition to that, I am currently learning full stack web development where I have 
-           already done some exciting and unique projects focused on E-commerce also with a responsive design that works fantastic 
-          on mobile platforms.<br> If you wish to learn more about me, click the button below </p>
-          <a href="./Pages/about-me.html"><button type="button" class="redirection__button"> More about me</button></a>
-      </section>
+    <div class="divider"> </div>
 
-      <div class="divider"> </div>
+    <!-- About me section -->
+    <section class="leftAligned__text">
+      <h2> Who am I? </h2>
+    </section>
 
-      <!-- Skills section -->
-      <section class="leftAligned__section">
-        <h2> Skills </h2>
-      </section>
-        
-        <div class="app__icons-grid">
-             <img src="./Src/Images/Logos/Unity logo.png" alt="Unity logo">
-             <img src="./Src/Images/Logos/Ue-logo.png" alt="Unreal engine logo">
-             <img src="./Src/Images/Logos/Wordpress logo.png" alt="Wordpress logo">
-             <img src="./Src/Images/Logos/Blender logo.png" alt="Blender logo">
-             <img src="./Src/Images/Dummy image.png" alt="Dummy logo">
-             <img src="./Src/Images/Dummy image.png" alt="Dummy logo">
-        </div>
-      <section class="centered__container-text">
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam delectus excepturi quos quod nemo voluptatibus debitis mollitia accusamus in, aspernatur expedita quo aliquid deserunt aliquam placeat pariatur repudiandae eaque praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, distinctio. Quos ratione incidunt voluptatibus fugiat, eum omnis sed, dolorum, impedit possimus hic odit ullam cum commodi officia doloremque dolorem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam tempore suscipit corporis doloremque doloribus culpa autem quas, nemo sequi, recusandae sit. Ex quidem accusantium, dolor sapiente quis nulla sunt.</p>
-        <a href="./Pages/projects.html"><button type="button" class="redirection__button"> My projects </button></a>
-      </section>
+    <section class="centered__container-text">
+      <p> I am a hobbiest game developer with over 6+ years of experience on the subject aimed to provide amazing 3D
+        experiences mainly for desktop platforms using the latest
+        technologies available on the market, specially those that can be considered revolutionary;
+        In addition to that, I am currently learning full stack web development where I have
+        already done some exciting and unique projects focused on e-commerce also with a responsive design that works
+        fantastic
+        on mobile platforms.<br> If you wish to learn more about me, click the button below </p>
+      <a href="./Pages/about-me.html"><button type="button" class="redirection__button"> More about me</button></a>
+    </section>
 
-      <!-- CV section -->
-      <div class="divider"> </div>
+    <div class="divider"> </div>
 
-      <section class="leftAligned__section">
+    <!-- Skills section -->
+    <section class="leftAligned__text">
+      <h2> Skills </h2>
+    </section>
+
+    
+    <div class="app__icons-grid">
+      <img src="./Src/Images/Logos/Unity logo.png" alt="Unity logo">
+      <img src="./Src/Images/Logos/Ue-logo.png" alt="Unreal engine logo">
+      <img src="./Src/Images/Logos/Wordpress logo.png" alt="Wordpress logo">
+      <img src="./Src/Images/Logos/Blender logo.png" alt="Blender logo">
+      <img src="./Src/Images/Dummy image.png" alt="Dummy logo">
+      <img src="./Src/Images/Dummy image.png" alt="Dummy logo">
+    </div>
+    <section class="centered__container-text">
+      <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magnam delectus excepturi quos quod nemo voluptatibus
+        debitis mollitia accusamus in, aspernatur expedita quo aliquid deserunt aliquam placeat pariatur repudiandae
+        eaque
+        praesentium. Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, distinctio. Quos ratione incidunt
+        voluptatibus fugiat, eum omnis sed, dolorum, impedit possimus hic odit ullam cum commodi officia doloremque
+        dolorem optio! Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores quisquam tempore suscipit
+        corporis
+        doloremque doloribus culpa autem quas, nemo sequi, recusandae sit. Ex quidem accusantium, dolor sapiente quis
+        nulla sunt.</p>
+      <a href="./Pages/projects.html"><button type="button" class="redirection__button"> My projects </button></a>
+    </section>
+
+    <!-- CV section -->
+    <div class="divider"> </div>
+
+    <section class="leftAligned__text">
       <h2> Contact </h2>
-      </section>
+    </section>
 
-      <section class="centered__container-text">
-        <p>If any of my previous projects caught your atention and you are looking to hire me, click the button below to be redirected to the contact page</p>
-      </section>
-    </main>
+    <section class="centered__container-text">
+      <p>If any of my previous projects caught your atention and you are looking to hire me, click the button below to
+        be
+        redirected to the contact page</p>
+    </section>
+  </main>
 
-    <footer>
-      <div class="divider"> </div>
-      <div class="footer"> 
-        <div id="footer__edge"></div>
-        <H2>Footer</H2>
-      </div>
-    </footer>
+  <footer>
+    <div class="divider"> </div>
+    <div class="footer">
+      <div id="footer__edge"></div>
+      <H2>Footer</H2>
+    </div>
+  </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
