@@ -111,7 +111,6 @@ p {
 
 }
 
-
 /* define navbar align and background for mobile*/
 @media (max-width : 700px) {
 
@@ -120,13 +119,15 @@ p {
     }
 
     .navbar__mobile-container {
+        position: fixed;
+        width: 100%;
         display: flex;
         justify-content: flex-end;
         background-color: #242425;
         box-shadow: 1px 1px 6px #000;
         height: 60px;
         align-items: center;
-
+        z-index: 1;
     }
 
     .navbar__mobile-burgerMenu {
@@ -152,10 +153,11 @@ p {
     }
 
     .hero__container-sideImage-container {
-      display: none;
+        display: none;
     }
 
 }
+
 @media (min-width : 1200px) {
     .hero__container {
         position: relative;
@@ -214,14 +216,22 @@ p {
 }
 
 /* the following CSS defines the hero attributes for the other pages */
-.hero__container-title {
+
+.hero__container-image {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 500px;
 }
 
-.hero__container-title h1 {
+.hero__container-image img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.hero__container-image h1 {
+    position: absolute;
     font-size: 60px;
     text-align: center;
 }
@@ -230,7 +240,7 @@ p {
 
 
 /* made a class for centering text, I guess I can reuse this later*/
-.centered__container-text{
+.centered__container-text {
 
     margin: 50px 20% 50px 20%;
     text-align: center;
@@ -259,6 +269,7 @@ p {
 .centered__container-text button:hover {
     width: 200px;
     height: 60px;
+    background-color: #006aff;
     opacity: 1;
     transition: ease 0.2s;
 
@@ -371,37 +382,58 @@ p {
         display: flex;
         flex-direction: column;
         align-items: center;
+        gap: 50px;
+        margin-bottom: 50px;
     }
 }
 
 /* desktop grid */
 @media (min-width : 1200px) {
     .projects__grid {
+        position: relative;
         display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        align-items: center;
+        grid-template-columns: repeat(4, 2fr);
         justify-content: center;
-        justify-items: center;
-        column-gap: 50px;
         max-width: 40%;
-        margin: 0 auto;
+        margin: 0 auto 50px;
+        gap: 50px;
     }
 
     /* center the project grid item if it is alone*/
     .projects__grid :nth-last-child(1):nth-child(odd) {
-        grid-column: 2 / span 2;
+        grid-column: 1 / span 4;
+        justify-self: center;
     }
 
 }
 
-.projects__grid img {
+/* set out position to relative in order to center the text using absolute position*/
+.projects__grid-image-container {
+    position: relative;
 
-    display: block;
-    margin: 0 auto;
-    object-fit: contain;
-    width: 250px;
-    height: 150px;
+}
+
+.projects__grid img {
+    object-fit: cover;
+    border-radius: 5%;
+    width: 400px;
+    height: 250px;
     transition: 0.2s;
+}
+
+.projects__grid p {
+    display: inline-block;
+    font-size: 25px;
+    /*disable pointer events to prevent blinking effect*/
+    pointer-events: none;
+    position: absolute;
+    top: 45%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    text-align: center;
+    word-break: break-all;
+    transition: ease 0.2s;
 }
 
 .projects__grid img:hover {
@@ -409,16 +441,11 @@ p {
     box-shadow: 0px 0px 20px 0px #365582;
 }
 
-
-.projects__grid p {
-    margin: 30px 0 50px;
-    text-align: center;
-    width: 250px;
-    height: 80px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    word-break: break-all;
+/* sets the opacitiy of the p tag to 1 so it becomes visible*/
+.projects__grid img:hover+p {
+    background-color: rgba(12, 12, 12, 0.805);
+    transition: ease 0.2s;
+    opacity: 1;
 }
 
 /* about me page CSS */
@@ -427,84 +454,10 @@ p {
     margin-bottom: -50px;
 }
 
-/* desktop profile description */
-@media (min-width : 1200px) {
-
-   /* .profile__container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-        height: 500px;
-    }
-
-    .profile__container-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .profile__container img {
-        margin-top: 50px;
-        object-fit: contain;
-        justify-self: center;
-        border-radius: 30%;
-        width: 400px;
-        height: 400px;
-    }*/
-
-    /*scale info paragraph according to display size */
-
-
-}
-
 #info__paragraph p {
     margin: -40px 5% 100px 5%;
     text-align: center;
 }
-
-/* mobile profile description*/
-
-@media (max-width : 1200px) {
-
-    /*.profile__container {
-        display: grid;
-        grid-template-rows: repeat(2, 1fr);
-        align-items: center;
-        height: auto;
-    }
-
-    .profile__container-image {
-        display: flex;
-        justify-content: center;
-    }
-
-    .profile__container img {
-        margin-top: 50px;
-        object-fit: contain;
-        justify-self: center;
-        border-radius: 30%;
-        width: 300px;
-        height: 300px;
-    }
-
-    .profile__description-div {
-        text-align: center;
-        margin-right: 5%;
-        margin-left: 5%;
-        margin-bottom: 30px;
-    }
-
-    .profile__description-div p {
-        font-size: 17px;
-    }
-
-    #info__paragraph p {
-        font-size: 17px;
-        margin: -40px 5% 100px 5%;
-        text-align: center;
-    }*/
-}
-
 
 .about__grid {
     margin-top: 50px;
@@ -525,7 +478,7 @@ p {
         transition: 0.2s;
         margin-bottom: 50px;
     }
-    
+
 }
 
 /* mobile about  grid*/
@@ -537,37 +490,62 @@ p {
         align-items: center;
         margin-bottom: 50px;
     }
-    
+
     .about__grid img {
         object-fit: contain;
         border-radius: 30%;
         width: 140px;
         height: 140px;
         transition: 0.2s;
-      
+
     }
-    
+
 }
 
 
 
 /* blog page CSS*/
 
-.blog__grid {
-    display: grid;
-    grid-row: repeat(5, 1fr);
-    gap: 100px;
-    margin-top: 100px;
-    margin-bottom: 50px;
+
+/* desktop blog grid*/
+@media (min-width : 1200px) {
+    .blog__grid {
+        display: grid;
+        grid-row: repeat(5, 1fr);
+        gap: 100px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+
+    .blog__grid-element {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 2fr 3fr;
+        margin-right: 300px;
+    }
 }
 
-.blog__grid-element {
-    display: grid;
-    align-items: center;
-    justify-items: center;
-    grid-template-columns: 2fr 3fr;
-    margin-right: 300px;
+/* mobile blog grid*/
+@media (max-width : 1200px) {
+    .blog__grid {
+        display: grid;
+        grid-column: repeat(1, 1fr);
+        gap: 100px;
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+
+
+    .blog__grid-element {
+        margin: 0px 30px 0px 30px;
+        display: grid;
+        grid-template-rows: 2fr;
+        text-align: center;
+    }
 }
+
 
 .blog__grid-element-image-container img {
     object-fit: cover;
@@ -578,6 +556,10 @@ p {
     margin-top: 30px;
     font-size: 20px;
     text-align: center;
+}
+
+.blog__grid-element-image-container span {
+    color: #618afb;
 }
 
 .blog__grid-element-description button {
@@ -601,6 +583,7 @@ p {
 /* button effects */
 
 .blog__grid-element-description button:hover {
+    background-color: #006aff;
     width: 200px;
     opacity: 1;
     transition: ease 0.2s;
