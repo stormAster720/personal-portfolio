@@ -423,9 +423,7 @@ p {
         gap: 50px;
     }
 
-
     .projects__grid img {
-        
         object-fit: cover;
         border-radius: 5%;
         width: 400px;
