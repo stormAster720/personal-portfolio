@@ -11,23 +11,36 @@
 </head>
 
 <body>
-  <!-- Navbar Desktop-->
-  <header>
-    <div class="navbar__container">
-      <nav class="navbar__elements">
-        <ul>
-          <li><a href="./index.html"> Home </a></li>
-          <li><a href="./Pages/projects.html"> Projects </a></li>
-          <li><a href="./Pages/about-me.html"> About me </a></li>
-          <li><a href="./Pages/blog.html"> Blog </a></li>
-          <li><a href="./Pages/contact.html"> Contact </a></li>
-        </ul>
-      </nav>
-    </div>
 
-    <!-- Mobile Navbar -->
-    <nav class="navbar__mobile-container">
-      <img class="navbar__mobile-burgerMenu" src="./Src/Images/Icons/icons8-menu-50.png" alt="Navbar mobile menu">
+  <header>
+   
+     <!-- bootstrap navbar -->
+     <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbar">
+          <ul class="navbar-nav align-items-center text-center">
+            <li class="nav-item px-4">
+              <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="./Pages/projects.html">Projects</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="./Pages/about-me.html">About me</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="./Pages/blog.html">Blog</a>
+            </li>
+            <li class="nav-item px-4">
+              <a class="nav-link" href="./Pages/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <!-- Hero primary image -->
@@ -39,7 +52,7 @@
         </div>
 
         <!--Hero secondary image bootstrap carousel-->
-        <div class="hero__container-sideImage-container mt-5">
+        <div class="hero__container-sideImage-container">
           <div class="carousel-fade slide h-100" data-bs-ride="carousel">
             <div class="carousel-inner h-100">
 
