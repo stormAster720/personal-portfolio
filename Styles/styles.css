@@ -373,6 +373,7 @@ p {
     background-color: white;
 }
 
+
 /* projects page CSS */
 
 /* mobile grid */
@@ -384,6 +385,29 @@ p {
         align-items: center;
         gap: 50px;
         margin-bottom: 50px;
+    }
+
+    .projects__grid img {
+        object-fit: cover;
+        border-radius: 5%;
+        width: 250px;
+        height: 150px;
+        transition: 0.2s;
+    }
+
+    .projects__grid p {
+        display: inline-block;
+        font-size: 15px;
+        /*disable pointer events to prevent blinking effect*/
+        pointer-events: none;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        text-align: center;
+        word-break: break-all;
+        transition: ease 0.2s;
     }
 }
 
@@ -399,41 +423,42 @@ p {
         gap: 50px;
     }
 
+
+    .projects__grid img {
+        
+        object-fit: cover;
+        border-radius: 5%;
+        width: 400px;
+        height: 250px;
+        transition: 0.2s;
+    }
+
+    .projects__grid p {
+        display: inline-block;
+        font-size: 25px;
+        /*disable pointer events to prevent blinking effect*/
+        pointer-events: none;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        text-align: center;
+        word-break: break-all;
+        transition: ease 0.2s;
+    }
+
     /* center the project grid item if it is alone*/
     .projects__grid :nth-last-child(1):nth-child(odd) {
         grid-column: 1 / span 4;
         justify-self: center;
     }
-
 }
 
 /* set out position to relative in order to center the text using absolute position*/
 .projects__grid-image-container {
     position: relative;
 
-}
-
-.projects__grid img {
-    object-fit: cover;
-    border-radius: 5%;
-    width: 400px;
-    height: 250px;
-    transition: 0.2s;
-}
-
-.projects__grid p {
-    display: inline-block;
-    font-size: 25px;
-    /*disable pointer events to prevent blinking effect*/
-    pointer-events: none;
-    position: absolute;
-    top: 45%;
-    left: 0;
-    right: 0;
-    opacity: 0;
-    text-align: center;
-    word-break: break-all;
-    transition: ease 0.2s;
 }
 
 .projects__grid img:hover {
