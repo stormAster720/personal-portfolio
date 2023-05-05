@@ -51,15 +51,6 @@ p {
 /*setup resonsive font size for mobile*/
 
 @media (max-width : 720px) {
-
-    h1 {
-        font-size: 20px;
-    }
-
-    h2 {
-        font-size: 20px;
-    }
-
     p {
         font-size: 17px;
     }
@@ -129,6 +120,7 @@ p {
     .hero__container {
         position: relative;
         display: flex;
+        margin-top: 60px;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
@@ -216,17 +208,34 @@ p {
 }
 
 /* made a class for centering text, I guess I can reuse this later*/
-.centered__container-text {
 
-    margin: 50px 20% 50px 20%;
-    text-align: center;
 
+/* desktop hero view */
+@media (min-width : 1200px) {
+
+    .centered__container-text {
+
+        margin: 50px 30px 50px 30px;
+        text-align: center;
+    }
+
+    .centered__container-text h2 {
+
+        padding-bottom: 50px;
+    }
 }
+/* mobile */
+@media (max-width : 1200px) {
+    .centered__container-text {
 
-.centered__container-text h2 {
+        margin: 20px 30px;
+        text-align: center;
+    }
 
-    padding-bottom: 50px;
-
+    .centered__container-text h2 {
+        padding-top: 10px;
+        padding-bottom: 20px;
+    }
 }
 
 .centered__container-text button {
@@ -253,7 +262,7 @@ p {
 
 /* skill section */
 
-/* reusable centerable text*/
+/* desktop left aligned text container */
 @media (min-width : 1200px) {
 
     .leftAligned__text h2 {
@@ -265,7 +274,7 @@ p {
 
 }
 
-/* mobile */
+/* mobile left aligned text container */
 @media (max-width : 1200px) {
 
     .leftAligned__text {
@@ -275,23 +284,24 @@ p {
 
     .leftAligned__text h2 {
 
-        margin-top: 50px;
-
+        margin-top: 30px;
+        margin-bottom: 0px;
         font-size: 48px;
     }
 
 }
 
 /* mobile app grid */
+
 @media (max-width : 1200px) {
     .app__icons-grid {
         display: grid;
         gap: 1px;
-        grid-template-columns: repeat(2, 200px);
+        padding: 10x;
+        grid-template-columns: repeat(2, 160px);
         justify-content: center;
         justify-items: center;
     }
-
 
     .app__icons-grid img {
         display: flex;
@@ -450,12 +460,18 @@ p {
 
 /* about me page CSS */
 
-#name {
-    margin-bottom: -50px;
+/* mobile profile header */
+
+@media (max-width : 720px) {
+
+    #profile__header {
+      display: none;
+    }
 }
 
+
 #info__paragraph p {
-    margin: -40px 5% 100px 5%;
+    margin: 30px 30px 50px 30px;
     text-align: center;
 }
 
@@ -476,7 +492,6 @@ p {
         width: 400px;
         height: 400px;
         transition: 0.2s;
-        margin-bottom: 50px;
     }
 
 }
@@ -502,10 +517,16 @@ p {
 
 }
 
-
-
 /* blog page CSS*/
 
+/*set paragraph size for mobile blog title*/
+
+@media (max-width : 720px) {
+
+    #entries__title {
+      display: none;
+    }
+}
 
 /* desktop blog grid*/
 @media (min-width : 1200px) {
@@ -515,7 +536,6 @@ p {
         margin-top: 100px;
         margin-bottom: 50px;
     }
-
 
     .blog__grid-element {
         display: grid;
@@ -592,7 +612,6 @@ p {
         font-size: 32px;
         margin-bottom: 15px;
     }
-
 }
 
 /* button effects */
@@ -639,26 +658,51 @@ p {
 
 /* contact page CSS */
 
+
+
 /*mobile contact form*/
 
-@media (max-width: 1024px) {
+@media (max-width: 1200px) {
+
+    .contact__form-logo{
+        display: none;
+    }
 
     .contact__form-container {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
         gap: 10px;
         align-content: center;
     }
+    
+    .contact__form-div .contact__form-background {
+        box-shadow: 0px 0px 5px 0px #365582;
+        border-radius: 3px;
+        background-color: #242425;
+        height: 350px;
+        width: 90vw;
+        margin-bottom: 50px;
+    }
+    
 }
 
 /*desktop contact form*/
-@media (min-width: 1024px) {
+@media (min-width: 720px) {
     .contact__form-container {
         display: flex;
         justify-content: center;
-        gap: 500px;
-        align-content: center;
+        gap: 20vw;
+    }
+
+    .contact__form-div .contact__form-background {
+        box-shadow: 0px 0px 5px 0px #365582;
+        border-radius: 3px;
+        background-color: #242425;
+        height: 350px;
+        width: 600px;
+        margin-bottom: 50px;
     }
 
 }
@@ -681,17 +725,12 @@ p {
     display: flex;
 }
 
-.contact__form-div .contact__form-background {
-    border-radius: 3px;
-    background-color: #606060;
-    height: 350px;
-    width: 600px;
-    margin-bottom: 50px;
-}
-
-
 .contact__form-div h2 {
     font-size: 30px;
+}
+
+.contact__form-inputs {
+    margin-left: 50px;
 }
 
 .contact__form-div input {
@@ -699,8 +738,8 @@ p {
     width: 80%;
     height: 35px;
     margin-top: 30px;
-    margin-left: 50px;
-    border-color: #618afb;
+    background-color: #00000034;
+    border-width: 1px;
 }
 
 .contact__form-div textarea {
@@ -708,14 +747,15 @@ p {
     width: 80%;
     height: 70px;
     margin-top: 30px;
-    margin-left: 50px;
     margin-bottom: 30px;
-    border-color: #618afb;
+    background-color: #00000034;
+    border-width: 1px;
 }
 
 
 .contact__form-logo {
     position: relative;
+    justify-self: center;
 
 }
 
