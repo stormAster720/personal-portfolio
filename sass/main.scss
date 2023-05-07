@@ -1,0 +1,20 @@
+main {
+    margin: 15px;
+}
+
+
+main section {
+    background-color: aqua;
+}
+
+//nesting
+
+main {
+    margin: 2px;
+    
+    section {
+        background-color: aqua;
+    }
+}
+
+//ref to parent &
