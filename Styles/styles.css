@@ -209,7 +209,6 @@ p {
 
 /* desktop hero view */
 
-
 /* made a class for centering text, I guess I can reuse this later*/
 @media (min-width : 1200px) {
 
@@ -748,6 +747,7 @@ p {
     width: 80%;
     height: 35px;
     margin-top: 30px;
+    color: white;
     background-color: #00000034;
     border-width: 1px;
 }
@@ -758,6 +758,7 @@ p {
     height: 70px;
     margin-top: 30px;
     margin-bottom: 30px;
+    color: white;
     background-color: #00000034;
     border-width: 1px;
 }
