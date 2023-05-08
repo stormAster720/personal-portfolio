@@ -1,20 +1,33 @@
-main {
-    margin: 15px;
-}
+//utils
 
+//import site defauls (css reset and bg color)
+@import "./utils/defaults";
 
-main section {
-    background-color: aqua;
-}
+//components
 
-//nesting
+//import navbar css
+@import "./components/navbar";
+//import divider class
+@import "./components/divider";
+//import center text class
+@import "./components/centered-text";
+//import left text class
+@import "./components/leftAligned-text";
+//import footer
+@import "./components/footer";
+//import hero for all pages
+@import "./components/introductory_hero";
 
-main {
-    margin: 2px;
-    
-    section {
-        background-color: aqua;
-    }
-}
+//views
 
-//ref to parent &
+//import index page css 
+@import "./views/index";
+//import projects page css
+@import "./views/projects";
+//import about me page css
+@import "./views/about-me";
+//import blog page css
+@import "./views/blog";
+//import contact page css
+@import "./views/contact";
+

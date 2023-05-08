@@ -1,0 +1,20 @@
+/* the following CSS defines the hero attributes for the other pages */
+
+.hero__container-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    h1 {
+        position: absolute;
+        font-size: 60px;
+        text-align: center;
+    }
+}

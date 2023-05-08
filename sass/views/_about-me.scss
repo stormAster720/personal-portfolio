@@ -1,0 +1,57 @@
+/* about me page CSS */
+
+/* mobile profile header */
+
+@media (max-width : 720px) {
+
+    #profile__header {
+        display: none;
+    }
+}
+
+#info__paragraph {
+    p {
+        margin: 30px 30px 50px 30px;
+        text-align: center;
+    }
+}
+
+.about__grid {
+    margin-top: 50px;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+
+/* desktop about  grid*/
+@media (min-width : 1200px) {
+
+    .about__grid {
+        img {
+            object-fit: contain;
+            border-radius: 30%;
+            width: 400px;
+            height: 400px;
+            transition: 0.2s;
+        }
+    }
+}
+
+/* mobile about  grid*/
+@media (max-width : 1200px) {
+
+    .about__grid {
+        gap: 30px;
+        align-items: center;
+        margin-bottom: 50px;
+
+        img {
+            object-fit: contain;
+            border-radius: 30%;
+            width: 140px;
+            height: 140px;
+            transition: 0.2s;
+        }
+    }
+}

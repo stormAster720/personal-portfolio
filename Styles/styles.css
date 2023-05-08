@@ -291,6 +291,8 @@ p {
 
 }
 
+/* ///////////////////////////////////////////*/
+
 /* mobile app grid */
 
 @media (max-width : 1200px) {
@@ -477,7 +479,6 @@ p {
         display: none;
     }
 }
-
 
 #info__paragraph p {
     margin: 30px 30px 50px 30px;
