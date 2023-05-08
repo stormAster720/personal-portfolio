@@ -148,24 +148,24 @@ p {
     }
 }
 
-.hero__container .hero__logo-container {
+.hero__container .hero__container-logo {
     margin: auto;
 }
 
 /* Main title size and position*/
 
-.hero__container .hero__logo-container a {
+.hero__container .hero__container-logo a {
     display: flex;
     justify-content: center;
 }
 
 
-.hero__container .hero__logo-container img {
+.hero__container .hero__container-logo img {
 
     height: 200px;
 }
 
-.hero__container .hero__logo-container span {
+.hero__container .hero__container-logo span {
 
     color: #71aaff;
 
