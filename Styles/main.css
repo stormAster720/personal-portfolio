@@ -113,6 +113,24 @@ p {
   font-size: 22px;
 }
 
+/* the following CSS defines the hero attributes for the other pages */
+.hero__container-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 500px;
+}
+.hero__container-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.hero__container-image h1 {
+  position: absolute;
+  font-size: 60px;
+  text-align: center;
+}
+
 /* Universal divider for all content separation */
 .divider {
   height: 50px;
@@ -183,26 +201,6 @@ p {
     font-size: 48px;
   }
 }
-/* desktop left aligned text container */
-@media (min-width: 1200px) {
-  .leftAligned__text h2 {
-    margin-top: 50px;
-    margin-left: 60px;
-    font-size: 48px;
-  }
-}
-/* mobile left aligned text container */
-@media (max-width: 1200px) {
-  .leftAligned__text {
-    justify-content: center;
-    display: flex;
-  }
-  .leftAligned__text h2 {
-    margin-top: 30px;
-    margin-bottom: 0px;
-    font-size: 48px;
-  }
-}
 /* footer  */
 .footer {
   box-shadow: 0px 0px 3px 0px #000000;
@@ -234,24 +232,6 @@ p {
 #footer__logo:hover {
   transition: 0.2s;
   transform: scale(1.2);
-}
-
-/* the following CSS defines the hero attributes for the other pages */
-.hero__container-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 500px;
-}
-.hero__container-image img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
-}
-.hero__container-image h1 {
-  position: absolute;
-  font-size: 60px;
-  text-align: center;
 }
 
 /* hero attributes*/
@@ -383,20 +363,21 @@ p {
   .projects__grid {
     position: relative;
     display: grid;
-    grid-template-columns: repeat(4, 2fr);
+    grid-template-columns: repeat(4, 1fr);
     justify-content: center;
+    align-items: center;
     max-width: 40%;
     margin: 50px auto;
     gap: 50px;
   }
-  .projects__grid img {
+  .projects__grid-image-container img {
     object-fit: cover;
     border-radius: 5%;
-    width: 400px;
+    width: min(21vw, 400px);
     height: 250px;
     transition: 0.2s;
   }
-  .projects__grid p {
+  .projects__grid-image-container p {
     display: inline-block;
     font-size: 25px;
     /*disable pointer events to prevent blinking effect*/
@@ -419,14 +400,13 @@ p {
 /* set out position to relative in order to center the text using absolute position*/
 .projects__grid-image-container {
   position: relative;
+  justify-self: center;
 }
-
-.projects__grid img:hover {
+.projects__grid-image-container img:hover {
   transform: scale(1.2);
   box-shadow: 0px 0px 20px 0px #365582;
-  /* sets the opacitiy of the p tag to 1 so it becomes visible*/
 }
-.projects__grid img:hover + p {
+.projects__grid-image-container img:hover + p {
   background-color: rgba(12, 12, 12, 0.805);
   transition: ease 0.2s;
   opacity: 1;
