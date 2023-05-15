@@ -13,11 +13,11 @@ body {
 
 @font-face {
   font-family: PTsans;
-  src: url(../Src/fonts/PTSans-Regular.ttf);
+  src: url(../src/fonts/ptsans-regular.ttf);
 }
 @font-face {
   font-family: Anuphan;
-  src: url(../Src/fonts/Anuphan.ttf);
+  src: url(../src/fonts/anuphan.ttf);
 }
 /*set font for headers */
 h1 {
