@@ -20,7 +20,6 @@ body {
   src: url(../src/fonts/anuphan.ttf);
 }
 /*set font for headers */
-
 h1 {
   margin-bottom: 0px;
   font-family: PTsans;
@@ -507,7 +506,7 @@ p {
   font-size: 20px;
   text-align: center;
 }
-.blog__grid-element-image-container span {
+.blog__grid-element-image-container p span {
   color: #618afb;
 }
 
