@@ -4,7 +4,7 @@
 @media (min-width : 1200px) {
 
     .centered__container-text {
-
+        @include fadeInAnimation(1s, 0.5s);
         margin: 50px 20% 50px 20%;
         text-align: center;
 
@@ -17,6 +17,7 @@
 /* mobile */
 @media (max-width : 1200px) {
     .centered__container-text {
+        @include fadeInAnimation(1s, 0.5s);
         margin: 20px 30px;
         text-align: center;
 
@@ -34,9 +35,9 @@
 button {
     font-size: 15px;
     border-style: outset;
-    border-color: #618afb;
+    border-color: $secondaryColor;
     color: white;
-    background-color: #232323;
+    background-color: $btnNormalColor;
     border-radius: 15px;
     margin-top: 20px;
     height: 50px;
@@ -46,7 +47,7 @@ button {
     &:hover{
         width: 200px;
         height: 60px;
-        background-color: #006aff;
+        background-color: $btnHoverColor;
         opacity: 1;
         transition: ease 0.2s;
     }

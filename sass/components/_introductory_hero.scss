@@ -1,6 +1,7 @@
 /* the following CSS defines the hero attributes for the other pages */
 
 .hero__container-image {
+    @include fadeInAnimation(0.6s, 0s);
     display: flex;
     align-items: center;
     justify-content: center;

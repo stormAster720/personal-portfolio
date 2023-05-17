@@ -61,6 +61,7 @@
 
 /* the tab on right side for contact details*/
 .contact__form-div {
+    @include fadeInAnimation(1s, 0.3s);
     border-radius: 3px;
     justify-content: center;
     align-items: center;
@@ -102,6 +103,7 @@
 }
 
 .contact__form-logo {
+    @include fadeInAnimation(1s, 0.3s);
     position: relative;
     justify-self: center;
 

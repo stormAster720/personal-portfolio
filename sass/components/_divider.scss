@@ -1,6 +1,7 @@
 /* Universal divider for all content separation */
 
 .divider {
+    @include fadeInAnimation(0.3s, 0s);
     height: 50px;
-    background-color: #444444;
+    background-color: $dividerColor;
 }

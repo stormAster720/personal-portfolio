@@ -1,0 +1,28 @@
+//smooth ease effect with an adjustable time
+
+@mixin smoothTransition ($time, $delay) {
+    transition: ease $time;
+    animation-delay: $delay;
+}
+
+//fade in animation 
+
+@mixin fadeInAnimation ($time, $delay) {
+    opacity: 0;
+    animation: fadeIn $time forwards;
+    animation-delay: $delay;
+
+    @keyframes fadeIn {
+        0% {
+            opacity: 0;
+        }
+
+        1% {
+      opacity: 0;
+    }
+
+        100% {
+            opacity: 1;
+        }
+    }
+}

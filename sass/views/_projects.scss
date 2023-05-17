@@ -4,6 +4,7 @@
 
 @media (max-width : 1200px) {
     .projects__grid {
+        @include fadeInAnimation(1s, 0.3s);
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -39,6 +40,7 @@
 /* desktop grid */
 @media (min-width : 1200px) {
     .projects__grid {
+        @include fadeInAnimation(1s, 0.3s);
         position: relative;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
@@ -90,7 +92,7 @@
 
         img:hover {
           transform: scale(1.2);
-          box-shadow: 0px 0px 20px 0px #365582;
+          box-shadow: 0px 0px 20px 0px $boxShadowColor;
       
           // sets the opacity of the p tag to 1 so it becomes visible
           + p {
