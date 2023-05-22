@@ -6,12 +6,18 @@
         @include fadeInAnimation(1s, 0s);
         position: relative;
         display: flex;
-        margin-top: 60px;
+        padding-top: 60px;
         flex-direction: column;
         justify-content: space-between;
         height: 100%;
     }
 
+    .hero__container-logo {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 350px;
+    }
     .hero__container-sideImage-container {
         display: none;
     }
@@ -22,16 +28,20 @@
 @media (min-width : 1200px) {
     .hero__container {
         @include fadeInAnimation(1s, 0s);
+        padding-top: 60px;
         position: relative;
         display: flex;
         justify-content: space-between;
         height: 500px;
     }
 
+    .hero__container-logo {
+        p {
+            @include slideDownAnimation(1s, 0.2s);
+        }
+    }
+
     .hero__container-sideImage-container {
-        background-repeat: no-repeat;
-        background-size: cover;
-        /*background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0) 20%,rgba(0, 0, 0, 0.7) 100%), url('../src/Images/Dummy\ image.png');*/
         width: 50%;
         z-index: -1;
     }
@@ -52,14 +62,14 @@
             height: 200px;
         }
 
-        span {
-            color: $secondaryColor;
+        p {
+            margin-bottom: 0px;
         }
     }
 
     h1 {
         font-weight: bold;
-        font-size: 36px;
+        font-size: 60px;
         text-align: left;
     }
 

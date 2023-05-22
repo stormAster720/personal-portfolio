@@ -1,7 +1,3 @@
-/* contact page CSS */
-
-
-
 /*mobile contact form*/
 
 @media (max-width: 1200px) {
@@ -10,107 +6,106 @@
         display: none;
     }
 
-    .contact__form-container {
+    .contact__form {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: 10px;
         align-content: center;
-    }
 
-    .contact__form-div .contact__form-background {
-        box-shadow: 0px 0px 5px 0px #365582;
-        border-radius: 3px;
-        background-color: #242425;
-        height: 350px;
-        width: 90vw;
-        margin-bottom: 50px;
-    }
 
+        &-background {
+            box-shadow: 0px 0px 5px 0px #365582;
+            border-radius: 3px;
+            background-color: #242425;
+            height: 350px;
+            width: 90vw;
+            margin-bottom: 50px;
+        }
+
+    }
 }
 
 /*desktop contact form*/
 @media (min-width: 720px) {
-    .contact__form-container {
+    .contact__form {
         display: flex;
         justify-content: center;
         gap: 20vw;
-    }
 
-    .contact__form-div .contact__form-background {
-        box-shadow: 0px 0px 5px 0px #365582;
-        border-radius: 3px;
-        background-color: #242425;
-        height: 350px;
-        width: 600px;
-        margin-bottom: 50px;
-    }
+        &-background {
+            box-shadow: 0px 0px 5px 0px #365582;
+            border-radius: 3px;
+            background-color: #242425;
+            height: 350px;
+            width: 600px;
+            margin-bottom: 50px;
+        }
 
+    }
 }
 
-.contact__form-container {
-
+.contact__form {
     h2 {
         margin-top: 50px;
         margin-left: 60px;
         font-size: 48px;
     }
 
-}
+    &-logo {
+        @include fadeInAnimation(1s, 0.3s);
+        position: relative;
+        justify-self: center;
 
-/* the tab on right side for contact details*/
-.contact__form-div {
-    @include fadeInAnimation(1s, 0.3s);
-    border-radius: 3px;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-        font-size: 30px;
+        img {
+            object-fit: contain;
+            width: 400px;
+            height: 400px;
+        }
     }
 
-    input {
-        display: block;
-        width: 80%;
-        height: 35px;
-        margin-top: 30px;
-        color: white;
-        background-color: #00000034;
-        border-width: 1px;
+    /* the tab on right side for contact details*/
+
+    &-div {
+        @include fadeInAnimation(1s, 0.3s);
+        border-radius: 3px;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            font-size: 30px;
+        }
+
+        input {
+            display: block;
+            width: 80%;
+            height: 35px;
+            margin-top: 30px;
+            color: white;
+            background-color: #00000034;
+            border-width: 1px;
+        }
+
+        textarea {
+            display: block;
+            width: 80%;
+            height: 70px;
+            margin-top: 30px;
+            margin-bottom: 30px;
+            color: white;
+            background-color: #00000034;
+            border-width: 1px;
+        }
     }
 
-    textarea{
-        display: block;
-        width: 80%;
-        height: 70px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        color: white;
-        background-color: #00000034;
-        border-width: 1px;
+    /* center the content inside the contact form card*/
+
+    &-wrapper {
+        display: flex;
     }
 
-}
-
-/* center the content inside the contact form card*/
-.contact__form-wrapper {
-    display: flex;
-}
-
-.contact__form-inputs {
-    margin-left: 50px;
-}
-
-.contact__form-logo {
-    @include fadeInAnimation(1s, 0.3s);
-    position: relative;
-    justify-self: center;
-
-    img {
-        object-fit: contain;
-        width: 400px;
-        height: 400px;
+    &-inputs {
+        margin-left: 50px;
     }
-
 }

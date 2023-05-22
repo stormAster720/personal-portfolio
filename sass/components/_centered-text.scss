@@ -6,7 +6,7 @@
     .centered__container-text {
         @include fadeInAnimation(1s, 0.5s);
         margin: 50px 20% 50px 20%;
-        text-align: center;
+        text-align: start;
 
         h2{
             padding-bottom: 50px;
@@ -19,37 +19,11 @@
     .centered__container-text {
         @include fadeInAnimation(1s, 0.5s);
         margin: 20px 30px;
-        text-align: center;
+        text-align: start;
 
         h2 {
             padding-top: 10px;
             padding-bottom: 20px;
         }
     }
-}
-
-.centered__container-text {
-    
-/* set button default styles */
-
-button {
-    font-size: 15px;
-    border-style: outset;
-    border-color: $secondaryColor;
-    color: white;
-    background-color: $btnNormalColor;
-    border-radius: 15px;
-    margin-top: 20px;
-    height: 50px;
-    width: 150px;
-    transition: ease 0.2s;
-
-    &:hover{
-        width: 200px;
-        height: 60px;
-        background-color: $btnHoverColor;
-        opacity: 1;
-        transition: ease 0.2s;
-    }
-}
 }

@@ -4,7 +4,7 @@ $titleColor : white;
 $subtitleColor : white;
 $paragraphColor : white;
 
-$dividerColor : #444444;
+$dividerColor : #272727;
 
 //secondary color for general purpose
 
@@ -28,8 +28,10 @@ $btnHoverColor : #006aff;
 /*define website background*/
 
 body {
-    background-color: #232323;
+    backdrop-filter: blur(4px);
+    background-color: $primaryColor;
 }
+
 
 //set font faces
 
@@ -69,12 +71,53 @@ p {
     color: $paragraphColor;
 }
 
+/* set span colors */
+span {
+    font-weight: bold;
+    color: $secondaryColor;
+}
+
 /*setup responsive font size for mobile*/
 
 @media (max-width : 720px) {
     p {
         font-size: 17px;
     }
+}
+
+.cta__button {
+    /* set button default styles */
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 50px;
+    height: 50px;
+    width: 130px;
+    transition: ease 0.2s;
+
+
+    @include buttonHoverEffect(200px, 60px);
+}
+
+.redirection__button {
+    /* set button default styles */
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+    transition: ease 0.2s;
+
+    @include buttonHoverEffect(200px, 60px);
 }
 
 /* bootstrap default buttons css*/

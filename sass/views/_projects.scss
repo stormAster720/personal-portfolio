@@ -11,29 +11,29 @@
         gap: 50px;
         margin-top: 50px;
         margin-bottom: 50px;
-    }
 
-    .projects__grid img {
-        object-fit: cover;
-        border-radius: 5%;
-        width: 250px;
-        height: 150px;
-        transition: 0.2s;
-    }
+        img {
+            object-fit: cover;
+            border-radius: 5%;
+            width: 250px;
+            height: 150px;
+            transition: 0.2s;
+        }
 
-    .projects__grid p {
-        display: inline-block;
-        font-size: 15px;
-        /*disable pointer events to prevent blinking effect*/
-        pointer-events: none;
-        position: absolute;
-        top: 45%;
-        left: 0;
-        right: 0;
-        opacity: 0;
-        text-align: center;
-        word-break: break-all;
-        transition: ease 0.2s;
+        p {
+            display: inline-block;
+            font-size: 15px;
+            /*disable pointer events to prevent blinking effect*/
+            pointer-events: none;
+            position: absolute;
+            top: 45%;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            text-align: center;
+            word-break: break-all;
+            transition: ease 0.2s;
+        }
     }
 }
 
@@ -49,8 +49,6 @@
         max-width: 40%;
         margin: 50px auto;
         gap: 50px;
-
-        &-image-container {
 
         img {
             object-fit: cover;
@@ -74,7 +72,7 @@
             word-break: break-all;
             transition: ease 0.2s;
         }
-    }
+    
 }
 
     /* center the project grid item if it is alone*/
