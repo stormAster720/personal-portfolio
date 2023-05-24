@@ -14,11 +14,11 @@ body {
 
 @font-face {
   font-family: PTsans;
-  src: url(../src/fonts/ptsans-regular.ttf);
+  src: url(../..//src/fonts/ptsans-regular.ttf);
 }
 @font-face {
   font-family: Anuphan;
-  src: url(../src/fonts/anuphan.ttf);
+  src: url(../../src/fonts/anuphan.ttf);
 }
 /*set font for headers */
 h1 {
@@ -40,6 +40,7 @@ h2 {
 /* set font for paragraphs */
 p {
   font-family: Anuphan;
+  line-height: 1.7;
   font-size: 22px;
   color: white;
 }
@@ -65,17 +66,33 @@ span {
   color: white;
   background-color: #232323;
   border-radius: 15px;
-  margin-top: 50px;
+  margin-top: 20px;
   height: 50px;
-  width: 130px;
+  width: 170px;
   transition: ease 0.2s;
+  opacity: 0;
+  animation-name: slideDown;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
 }
 .cta__button:hover {
   width: 200px;
-  height: 60px;
+  height: 50px;
   background-color: #006aff;
   opacity: 1;
   transition: ease 0.2s;
+  box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
 }
 
 .redirection__button {
@@ -98,6 +115,45 @@ span {
   background-color: #006aff;
   opacity: 1;
   transition: ease 0.2s;
+  box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
+}
+
+.blog__button {
+  /* set button default styles */
+  text-align: center;
+  font-size: 15px;
+  border-style: outset;
+  border-color: #006aff;
+  color: white;
+  background-color: #232323;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 50px;
+  width: 170px;
+  transition: ease 0.2s;
+  opacity: 0;
+  animation-name: slideDown;
+  animation-duration: 2s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+@keyframes slideDown {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+.blog__button:hover {
+  width: 200px;
+  height: 50px;
+  background-color: #006aff;
+  opacity: 1;
+  transition: ease 0.2s;
+  box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
 }
 
 /* bootstrap default buttons css*/
@@ -126,7 +182,7 @@ span {
   animation: fadeIn 0.5s forwards;
   animation-delay: 0s;
   min-height: 60px;
-  background-color: #242425;
+  background-color: rgba(0, 0, 0, 0);
   box-shadow: 1px 1px 6px #000;
   /* styles for navbar when collapsed */
 }
@@ -470,8 +526,22 @@ span {
     }
   }
   .hero__container-sideImage-container {
-    width: 50%;
+    position: relative;
+    overflow: visible;
+    /*
+      transform-style: preserve-3d;
+      perspective: 100em;
+      transform: translate3d(0px, 80px, 0px) rotate3d(-0.1, -0.7, 0, -60deg);
+      box-shadow: 120px 0px 80px -10px rgba(0, 0, 0, 0.7);
+      border-width: 10px;
+    */
+    width: 53%;
+    box-shadow: -10px 0px 20px 10px rgba(0, 0, 0, 0.222);
     z-index: -1;
+    transform: skewX(-16deg) translateX(60px);
+  }
+  .hero__container-sideImage-container img {
+    transform: skewX(10deg) translateX(-40px);
   }
 }
 .hero__container-logo {
@@ -479,7 +549,6 @@ span {
   /* Main title size and position*/
 }
 .hero__container-logo a {
-  display: flex;
   justify-content: center;
 }
 .hero__container-logo img {
@@ -850,24 +919,8 @@ span {
   }
 }
 /* button effects */
-.blog__grid-element-description button {
-  font-size: 15px;
-  border-style: outset;
-  border-color: #006aff;
-  color: white;
-  background-color: #232323;
-  border-radius: 15px;
-  margin-top: 20px;
-  height: 50px;
-  width: 150px;
-  transition: ease 0.2s;
-}
-.blog__grid-element-description button:hover {
-  background-color: #006aff;
-  width: 200px;
-  transition: ease 0.2s;
-}
 .blog__grid-element-description button:hover::after {
+  transition: 1s;
   content: "→";
 }
 
