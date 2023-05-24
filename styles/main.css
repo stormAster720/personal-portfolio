@@ -14,11 +14,11 @@ body {
 
 @font-face {
   font-family: PTsans;
-  src: url(../..//src/fonts/ptsans-regular.ttf);
+  src: url(../src/fonts/ptsans-regular.ttf);
 }
 @font-face {
   font-family: Anuphan;
-  src: url(../../src/fonts/anuphan.ttf);
+  src: url(../src/fonts/anuphan.ttf);
 }
 /*set font for headers */
 h1 {
@@ -57,8 +57,8 @@ span {
     font-size: 17px;
   }
 }
+/* set cta button default styles */
 .cta__button {
-  /* set button default styles */
   text-align: center;
   font-size: 15px;
   border-style: outset;
@@ -95,8 +95,8 @@ span {
   box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
 }
 
+/* set standard button default styles */
 .redirection__button {
-  /* set button default styles */
   text-align: center;
   font-size: 15px;
   border-style: outset;
@@ -118,8 +118,8 @@ span {
   box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
 }
 
+/* set blog button default styles */
 .blog__button {
-  /* set button default styles */
   text-align: center;
   font-size: 15px;
   border-style: outset;
@@ -182,7 +182,7 @@ span {
   animation: fadeIn 0.5s forwards;
   animation-delay: 0s;
   min-height: 60px;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #232323;
   box-shadow: 1px 1px 6px #000;
   /* styles for navbar when collapsed */
 }
