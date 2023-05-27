@@ -1,0 +1,14 @@
+{
+  "name": "preentrega-velasquez-garcia",
+  "version": "1.0.0",
+  "description": "This is the repository of my personal portfolio , feel free to look at the code and copy it.",
+  "main": "index.js",
+  "scripts": {
+    "build-sass": "sass ./sass/main.scss ./styles/main.css -w --no-source-map"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "sass": "^1.62.1"
+  }
+}

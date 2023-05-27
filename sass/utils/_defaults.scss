@@ -1,0 +1,144 @@
+/* reset css default properties*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/*define website background*/
+
+body {
+    backdrop-filter: blur(4px);
+    background-color: $primaryColor;
+}
+
+
+//set font faces
+
+@font-face {
+    font-family: PTsans;
+    src: url(../src/fonts/ptsans-regular.ttf );
+}
+
+@font-face {
+    font-family: Anuphan;
+    src: url(../src/fonts/anuphan.ttf);
+}
+
+/*set font for headers */
+
+h1 {
+    margin-bottom: 0px;
+    font-family: PTsans;
+    font-size: 20px;
+    color: $titleColor;
+    font-weight: 800;
+}
+
+h2 {
+    margin-bottom: 0px;
+    font-weight: 800;
+    font-family: PTsans;
+    font-size: 48px;
+    color: $subtitleColor;
+}
+
+/* set font for paragraphs */
+
+p {
+    font-family: Anuphan;
+    line-height: 1.7;
+    font-size: 22px;
+    color: $paragraphColor;
+}
+
+/* set span colors */
+span {
+    font-weight: bold;
+    color: $secondaryColor;
+}
+
+/*setup responsive font size for mobile*/
+
+@media (max-width : 720px) {
+    p {
+        font-size: 17px;
+    }
+}
+
+    /* set cta button default styles */
+.cta__button {
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    transition: ease 0.2s;
+    @include slideDownAnimation(2s, 0s);
+    @include buttonHoverEffect(200px, 50px);
+}
+
+ /* set standard button default styles */
+.redirection__button {
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+    transition: ease 0.2s;
+
+    @include buttonHoverEffect(200px, 60px);
+}
+
+ /* set blog button default styles */
+.blog__button {
+     text-align: center;
+     font-size: 15px;
+     border-style: outset;
+     border-color: $secondaryColor;
+     color: white;
+     background-color: $btnNormalColor;
+     border-radius: 15px;
+     margin-top: 20px;
+     height: 50px;
+     width: 170px;
+     transition: ease 0.2s;
+     @include slideDownAnimation(2s, 0s);
+     @include buttonHoverEffect(200px, 50px);
+}
+
+/* bootstrap default buttons css*/
+
+.btn-group {
+    margin: auto;
+}
+
+.btn-primary {
+
+    border-width: 0px;
+    background-color: $secondaryColor;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+/* slim divider setup */
+
+.slim__divider {
+    margin: auto;
+    border-radius: 50px;
+    height: 1px;
+    width: 80%;
+    background-color: $secondaryColor;
+}
+
