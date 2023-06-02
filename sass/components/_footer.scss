@@ -26,9 +26,9 @@
     align-self: center;
     height: 25px;
     transition: 0.2s;
+}
 
-    &:hover {
-        transition: 0.2s;
-        transform: scale(1.2);
-    }
+#footer__logo:hover {
+    transition: 0.2s;
+    transform: scale(1.2);
 }
