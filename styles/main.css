@@ -8,7 +8,6 @@
 
 /*define website background*/
 body {
-  backdrop-filter: blur(4px);
   background-color: #232323;
 }
 
@@ -444,7 +443,6 @@ span {
   height: 25px;
   transition: 0.2s;
 }
-
 #footer__logo:hover {
   transition: 0.2s;
   transform: scale(1.2);
