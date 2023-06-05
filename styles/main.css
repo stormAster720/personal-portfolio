@@ -16,8 +16,8 @@ body {
   src: url(../src/fonts/ptsans-regular.ttf);
 }
 @font-face {
-  font-family: Anuphan;
-  src: url(../src/fonts/anuphan.ttf);
+  font-family: league-spartan;
+  src: url(../src/fonts/league-spartan.ttf);
 }
 /*set font for headers */
 h1 {
@@ -38,7 +38,8 @@ h2 {
 
 /* set font for paragraphs */
 p {
-  font-family: Anuphan;
+  font-family: league-spartan;
+  font-weight: 300;
   line-height: 1.7;
   font-size: 22px;
   color: white;
@@ -259,7 +260,7 @@ span {
   height: 100%;
   width: 100%;
   background-attachment: fixed;
-  background-position: center top;
+  background-position: bottom center;
   background-size: cover;
   background-repeat: no-repeat;
 }

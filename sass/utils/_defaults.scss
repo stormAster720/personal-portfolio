@@ -21,8 +21,8 @@ body {
 }
 
 @font-face {
-    font-family: Anuphan;
-    src: url(../src/fonts/anuphan.ttf);
+    font-family: league-spartan;
+    src: url(../src/fonts/league-spartan.ttf);
 }
 
 /*set font for headers */
@@ -46,7 +46,8 @@ h2 {
 /* set font for paragraphs */
 
 p {
-    font-family: Anuphan;
+    font-family: league-spartan;
+    font-weight: 300;
     line-height: 1.7;
     font-size: 22px;
     color: $paragraphColor;
