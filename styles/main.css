@@ -118,6 +118,29 @@ span {
   box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
 }
 
+/* set contact form send button default styles */
+.send__button {
+  text-align: center;
+  font-size: 15px;
+  border-style: outset;
+  border-color: #006aff;
+  color: white;
+  background-color: #232323;
+  border-radius: 15px;
+  margin-top: 20px;
+  height: 50px;
+  width: 150px;
+  transition: ease 0.2s;
+}
+.send__button:hover {
+  width: 200px;
+  height: 50px;
+  background-color: #006aff;
+  opacity: 1;
+  transition: ease 0.2s;
+  box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
+}
+
 /* set blog button default styles */
 .blog__button {
   text-align: center;
@@ -260,7 +283,7 @@ span {
   height: 100%;
   width: 100%;
   background-attachment: fixed;
-  background-position: bottom center;
+  background-position: bottom;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -907,7 +930,10 @@ span {
 }
 
 /*set paragraph size for mobile blog title*/
-@media (max-width: 720px) {
+@media (max-width: 1200px) {
+  .blog__grid-element-description p {
+    text-align: start;
+  }
   .blog__grid-element-description h2 {
     font-size: 25px;
     margin-bottom: 15px;
@@ -943,7 +969,7 @@ span {
     box-shadow: 0px 0px 5px 0px #365582;
     border-radius: 3px;
     background-color: #242425;
-    height: 350px;
+    height: auto;
     width: 90vw;
     margin-bottom: 50px;
   }
@@ -959,7 +985,7 @@ span {
     box-shadow: 0px 0px 5px 0px #365582;
     border-radius: 3px;
     background-color: #242425;
-    height: 350px;
+    height: auto;
     width: 600px;
     margin-bottom: 50px;
   }
@@ -1032,7 +1058,6 @@ span {
   width: 80%;
   height: 70px;
   margin-top: 30px;
-  margin-bottom: 30px;
   color: white;
   background-color: rgba(0, 0, 0, 0.2039215686);
   border-width: 1px;

@@ -67,9 +67,12 @@
 
 /*set paragraph size for mobile blog title*/
 
-@media (max-width : 720px) {
+@media (max-width : 1200px) {
 
     .blog__grid-element-description {
+        p {
+            text-align: start;
+        }
         h2 {
         font-size: 25px;
         margin-bottom: 15px;

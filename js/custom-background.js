@@ -6,5 +6,5 @@ customBackground.forEach((img) => {
   const imageUrl = img.dataset.url;
 
   // Set the background image URL for each element as well as their gradient
-  img.style.backgroundImage = ` linear-gradient(rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5)50%), url(${imageUrl})`;
+  img.style.backgroundImage = ` linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(0, 0, 0, 0.8) 50%), url(${imageUrl})`;
 });

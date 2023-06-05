@@ -101,6 +101,23 @@ span {
     @include buttonHoverEffect(200px, 60px);
 }
 
+ /* set contact form send button default styles */
+ .send__button {
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 150px;
+    transition: ease 0.2s;
+
+    @include buttonHoverEffect(200px, 50px);
+}
+
  /* set blog button default styles */
 .blog__button {
      text-align: center;
