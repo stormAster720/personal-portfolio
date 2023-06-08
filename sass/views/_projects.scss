@@ -12,6 +12,15 @@
         margin-top: 50px;
         margin-bottom: 50px;
 
+        //if we use a video, then do this
+        &-image-container-video {
+            object-fit: cover;
+            border-radius: 5%;
+            width: min(21vw, 400px);
+            height: 250px;
+            transition: 0.2s;
+        }
+
         img {
             object-fit: cover;
             border-radius: 5%;
