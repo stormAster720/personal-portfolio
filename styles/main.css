@@ -728,6 +728,13 @@ span {
       opacity: 1;
     }
   }
+  .projects__grid-image-container-video {
+    object-fit: cover;
+    border-radius: 5%;
+    width: min(21vw, 400px);
+    height: 250px;
+    transition: 0.2s;
+  }
   .projects__grid img {
     object-fit: cover;
     border-radius: 5%;
@@ -765,6 +772,15 @@ span {
   box-shadow: 0px 0px 20px 0px #365582;
 }
 .projects__grid-image-container img:hover + p {
+  background-color: rgba(12, 12, 12, 0.805);
+  transition: ease 0.2s;
+  opacity: 1;
+}
+.projects__grid-image-container video:hover {
+  transform: scale(1.2);
+  box-shadow: 0px 0px 20px 0px #365582;
+}
+.projects__grid-image-container video:hover + p {
   background-color: rgba(12, 12, 12, 0.805);
   transition: ease 0.2s;
   opacity: 1;
