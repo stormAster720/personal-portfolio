@@ -680,6 +680,13 @@ span {
       opacity: 1;
     }
   }
+  .projects__grid-image-container-video {
+    object-fit: cover;
+    border-radius: 5%;
+    width: 250px;
+    height: 150px;
+    transition: 0.2s;
+  }
   .projects__grid img {
     object-fit: cover;
     border-radius: 5%;
