@@ -4,7 +4,6 @@
     background-color: $primaryColor;
     box-shadow: 1px 1px 6px #000;
 
-    
 /* styles for navbar when collapsed */
 
     &-collapse.show {
@@ -30,16 +29,16 @@
     }
 }
 
-.navbar-nav .nav-link.active {
-    text-decoration: underline;
-    text-decoration-color: #006aff;
-}
-
 .nav-link {
     font-family: Anuphan;
     font-size: 20px;
     transition: 0.2s;
     line-height: 20px;
+
+    &.active {
+        text-decoration: underline;
+        text-decoration-color: #006aff;
+    }
 
     &:hover {
         color: #006aff;

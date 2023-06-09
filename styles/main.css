@@ -240,16 +240,15 @@ span {
   font-size: 25px;
 }
 
-.navbar-nav .nav-link.active {
-  text-decoration: underline;
-  text-decoration-color: #006aff;
-}
-
 .nav-link {
   font-family: Anuphan;
   font-size: 20px;
   transition: 0.2s;
   line-height: 20px;
+}
+.nav-link.active {
+  text-decoration: underline;
+  text-decoration-color: #006aff;
 }
 .nav-link:hover {
   color: #006aff;
