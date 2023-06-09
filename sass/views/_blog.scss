@@ -48,8 +48,10 @@
 }
 
 .blog__grid-element-image-container {
+
     img {
         object-fit: cover;
+        border-radius: 5%;
     }
 
     /*text below the image (date)*/
@@ -65,7 +67,7 @@
     }
 }
 
-/*set paragraph size for mobile blog title*/
+/*set paragraph size for mobile blog entry title*/
 
 @media (max-width : 1200px) {
 
@@ -73,31 +75,66 @@
         p {
             text-align: start;
         }
+
         h2 {
-        font-size: 25px;
-        margin-bottom: 15px;
+            font-size: 25px;
+            margin-bottom: 15px;
         }
     }
 }
 
-/*set paragraph size for desktop blog title*/
+/*set paragraph size for desktop blog entry title*/
 
 @media (min-width : 1200px) {
 
     .blog__grid-element-description {
         h2 {
-        font-size: 32px;
-        margin-bottom: 15px;
+            font-size: 32px;
+            margin-bottom: 15px;
         }
     }
 }
 
 /* button effects */
 
-.blog__grid-element-description button:hover::after{
-   
-    transition: 1s;
-    content: "→";
+.blog__grid-element-description {
+    button {
+        &:hover::after {
+            transition: 1s;
+            content: "→";
+        }
+    }
 }
-        
-    
+
+//Styles for blog pagination buttons
+.pagination {
+    .page-item {
+        a {
+            color: white;
+            background-color: $primaryColor;
+            border-color: $primaryColor;
+
+            &:focus {
+                color: white;
+                border-color: $btnHoverColor;
+                background-color: $btnHoverColor;
+                box-shadow: 0px 0px;
+            }
+
+            &:hover {
+                color: white;
+                border-color: $btnGlowColor;
+                background-color: $btnGlowColor;
+            }
+        }
+
+        //style for disabled button
+        &.disabled {
+            a {
+                color: white;
+                border-color: $primaryColor;
+                background-color: $primaryColor;
+            }
+        }
+    }
+}

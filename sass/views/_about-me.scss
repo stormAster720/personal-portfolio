@@ -7,14 +7,19 @@
     justify-content: center;
 }
 
+.profile-picture {
+    box-shadow: 0px 30px 50px -10px rgba(0, 0, 0, 0.7);
+}
+
 /* desktop about  grid*/
 @media (min-width : 1200px) {
 
     .about__grid {
         @include fadeInAnimation(1s, 0s);
         img {
-            object-fit: contain;
-            border-radius: 30%;
+            object-fit: cover;
+            box-shadow: 0px 30px 50px -10px rgba(0, 0, 0, 0.7);
+            border-radius: 3%;
             width: 400px;
             height: 300px;
             transition: 0.2s;
