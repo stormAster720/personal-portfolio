@@ -450,8 +450,7 @@ span {
     opacity: 1;
   }
 }
-
-#footer__edge {
+.footer__edge {
   margin-top: 60px;
   position: absolute;
   display: flex;
@@ -459,17 +458,15 @@ span {
   height: 1px;
   background-color: #006aff;
 }
-
-#footer__author {
+.footer__author {
   font-size: 12px;
 }
-
-#footer__logo {
+.footer__logo {
   align-self: center;
   height: 25px;
   transition: 0.2s;
 }
-#footer__logo:hover {
+.footer__logo:hover {
   transition: 0.2s;
   transform: scale(1.2);
 }
