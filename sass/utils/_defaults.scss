@@ -53,6 +53,14 @@ p {
     color: $paragraphColor;
 }
 
+/* set font for links */
+a {
+    //set line height because league spartan font has an offset on the Y axis
+    line-height: 50px;
+    font-family: league-spartan;
+    font-weight: bold;
+}
+
 /* set span colors */
 span {
     font-weight: bold;
