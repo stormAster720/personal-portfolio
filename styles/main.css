@@ -49,7 +49,6 @@ p {
 a {
   line-height: 50px;
   font-family: league-spartan;
-  font-weight: bold;
 }
 
 /* set span colors */
@@ -598,6 +597,10 @@ span {
 /* mobile app grid */
 @media (max-width: 1200px) {
   .app__icons-grid {
+    transition: "background-image 1s ease";
+    background-size: min(50vw, 250px);
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0s;
@@ -632,6 +635,10 @@ span {
     opacity: 0;
     animation: fadeIn 1s forwards;
     animation-delay: 0s;
+    transition: "background-image 1s ease";
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;

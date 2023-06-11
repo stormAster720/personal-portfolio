@@ -104,6 +104,13 @@
 
 @media (max-width : 1200px) {
     .app__icons-grid {
+
+        //css for app grid background for custom JS
+        transition : "background-image 1s ease";
+        background-size: min(50vw, 250px);
+        background-repeat: no-repeat;
+        background-position: center;
+
         @include fadeInAnimation(1s, 0s);
         display: grid;
         gap: 1px;
@@ -127,6 +134,13 @@
 @media (min-width : 1200px) {
     .app__icons-grid {
         @include fadeInAnimation(1s, 0s);
+
+        //css for app grid background for custom JS
+        transition : "background-image 1s ease";
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+
         display: flex;
         justify-content: center;
         align-items: center;
