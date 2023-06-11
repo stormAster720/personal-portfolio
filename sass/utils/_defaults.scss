@@ -74,8 +74,8 @@ span {
     }
 }
 
-/* set cta button default styles */
-.cta__button {
+//extend for button similar properties
+%button-shared-properties {
     text-align: center;
     font-size: 15px;
     border-style: outset;
@@ -84,76 +84,41 @@ span {
     background-color: $btnNormalColor;
     border-radius: 15px;
     margin-top: 20px;
+    transition: ease 0.2s;
+}
+
+/* set cta button default styles */
+.cta__button {
     height: 50px;
     width: 170px;
-    transition: ease 0.2s;
+    @extend %button-shared-properties;
     @include slideDownAnimation(2s, 0s);
     @include buttonHoverEffect(200px, 50px);
 }
 
 /* set standard button default styles */
 .redirection__button {
-    text-align: center;
-    font-size: 15px;
-    border-style: outset;
-    border-color: $secondaryColor;
-    color: white;
-    background-color: $btnNormalColor;
-    border-radius: 15px;
-    margin-top: 20px;
     height: 50px;
     width: 150px;
-    transition: ease 0.2s;
-
+    @extend %button-shared-properties;
     @include buttonHoverEffect(200px, 60px);
 }
 
 /* set contact form send button default styles */
 .send__button {
-    text-align: center;
-    font-size: 15px;
-    border-style: outset;
-    border-color: $secondaryColor;
-    color: white;
-    background-color: $btnNormalColor;
-    border-radius: 15px;
-    margin-top: 20px;
     height: 50px;
     width: 150px;
-    transition: ease 0.2s;
-
+    @extend %button-shared-properties;
     @include buttonHoverEffect(200px, 50px);
 }
 
 /* set blog button default styles */
 .blog__button {
-    text-align: center;
-    font-size: 15px;
-    border-style: outset;
-    border-color: $secondaryColor;
-    color: white;
-    background-color: $btnNormalColor;
-    border-radius: 15px;
-    margin-top: 20px;
     height: 50px;
     width: 170px;
-    transition: ease 0.2s;
+    @extend %button-shared-properties;
     @include slideDownAnimation(2s, 0s);
     @include buttonHoverEffect(200px, 50px);
-}
-
-/* bootstrap default buttons css*/
-
-.btn-group {
-    margin: auto;
-}
-
-.btn-primary {
-
-    border-width: 0px;
-    background-color: $secondaryColor;
-    margin: 20px;
-    margin-bottom: 100px;
 }
 
 /* slim divider setup */

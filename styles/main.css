@@ -63,8 +63,7 @@ span {
     font-size: 17px;
   }
 }
-/* set cta button default styles */
-.cta__button {
+.blog__button, .send__button, .redirection__button, .cta__button {
   text-align: center;
   font-size: 15px;
   border-style: outset;
@@ -73,9 +72,13 @@ span {
   background-color: #232323;
   border-radius: 15px;
   margin-top: 20px;
+  transition: ease 0.2s;
+}
+
+/* set cta button default styles */
+.cta__button {
   height: 50px;
   width: 170px;
-  transition: ease 0.2s;
   opacity: 0;
   animation-name: slideDown;
   animation-duration: 2s;
@@ -103,17 +106,8 @@ span {
 
 /* set standard button default styles */
 .redirection__button {
-  text-align: center;
-  font-size: 15px;
-  border-style: outset;
-  border-color: #006aff;
-  color: white;
-  background-color: #232323;
-  border-radius: 15px;
-  margin-top: 20px;
   height: 50px;
   width: 150px;
-  transition: ease 0.2s;
 }
 .redirection__button:hover {
   width: 200px;
@@ -126,17 +120,8 @@ span {
 
 /* set contact form send button default styles */
 .send__button {
-  text-align: center;
-  font-size: 15px;
-  border-style: outset;
-  border-color: #006aff;
-  color: white;
-  background-color: #232323;
-  border-radius: 15px;
-  margin-top: 20px;
   height: 50px;
   width: 150px;
-  transition: ease 0.2s;
 }
 .send__button:hover {
   width: 200px;
@@ -149,17 +134,8 @@ span {
 
 /* set blog button default styles */
 .blog__button {
-  text-align: center;
-  font-size: 15px;
-  border-style: outset;
-  border-color: #006aff;
-  color: white;
-  background-color: #232323;
-  border-radius: 15px;
-  margin-top: 20px;
   height: 50px;
   width: 170px;
-  transition: ease 0.2s;
   opacity: 0;
   animation-name: slideDown;
   animation-duration: 2s;
@@ -183,18 +159,6 @@ span {
   opacity: 1;
   transition: ease 0.2s;
   box-shadow: 0px 3px 7px 0px rgba(51, 97, 153, 0.694);
-}
-
-/* bootstrap default buttons css*/
-.btn-group {
-  margin: auto;
-}
-
-.btn-primary {
-  border-width: 0px;
-  background-color: #006aff;
-  margin: 20px;
-  margin-bottom: 100px;
 }
 
 /* slim divider setup */
