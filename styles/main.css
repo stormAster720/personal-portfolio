@@ -177,6 +177,7 @@ span {
   min-height: 60px;
   background-color: #232323;
   box-shadow: 0px 1px 2px #006aff;
+  transition: 0.2s;
   /* styles for navbar when collapsed */
 }
 @keyframes fadeIn {
@@ -204,13 +205,12 @@ span {
   transition: 0.2s;
   font-size: 22px;
 }
-.navbar-collapse.show {
-  transition: 0.2s;
+.navbar-collapse.show, .navbar-collapse.collapsing {
+  transition: 0.5s;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
-.navbar-collapse.show .navbar-nav {
+.navbar-collapse.show .navbar-nav, .navbar-collapse.collapsing .navbar-nav {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -219,7 +219,7 @@ span {
   height: 100vh;
   /*set the size of the text when the navbar is collapsed */
 }
-.navbar-collapse.show .navbar-nav a {
+.navbar-collapse.show .navbar-nav a, .navbar-collapse.collapsing .navbar-nav a {
   margin-top: 30px;
   font-size: 25px;
 }
