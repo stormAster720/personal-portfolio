@@ -396,6 +396,7 @@ span {
     justify-content: center;
   }
   .leftAligned__text h2 {
+    margin-left: 0px;
     margin-top: 30px;
     margin-bottom: 0px;
   }
@@ -620,7 +621,7 @@ span {
     opacity: 1;
   }
 }
-.projects__grid img, .projects__grid .projects__grid-image-container-video {
+.projects__grid video, .projects__grid img {
   object-fit: cover;
   border-radius: 5%;
   height: 250px;
@@ -646,11 +647,7 @@ span {
     display: flex;
     flex-direction: column;
   }
-  .projects__grid-image-container-video {
-    width: 250px;
-    height: 150px;
-  }
-  .projects__grid img {
+  .projects__grid video, .projects__grid img {
     width: 250px;
     height: 150px;
   }

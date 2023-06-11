@@ -23,11 +23,7 @@
         transition: 0.2s;
     }
 
-    &-image-container-video {
-        @extend %mediaSizes;
-    }
-
-    img {
+    video, img {
         @extend %mediaSizes;
     }
 
@@ -54,12 +50,7 @@
 
         //if we use a video, then do this
 
-        &-image-container-video {
-            width: 250px;
-            height: 150px;
-        }
-
-        img {
+        video, img {
             width: 250px;
             height: 150px;
         }
