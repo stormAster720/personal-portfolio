@@ -1,24 +1,17 @@
 /* class for centering text */
 
-@media (min-width : 1200px) {
+.centered__container-text {
+    @include fadeInAnimation(1s, 0.5s);
+    margin: 50px 20% 50px 20%;
+    text-align: start;
 
-    .centered__container-text {
-        @include fadeInAnimation(1s, 0.5s);
-        margin: 50px 20% 50px 20%;
-        text-align: start;
-
-        h2 {
-            padding-bottom: 50px;
-        }
+    h2 {
+        padding-bottom: 50px;
     }
-}
 
-/* mobile */
-@media (max-width : 1200px) {
-    .centered__container-text {
-        @include fadeInAnimation(1s, 0.5s);
+    /* mobile */
+    @media (max-width : 1200px) {
         margin: 20px 30px;
-        text-align: start;
 
         h2 {
             padding-top: 10px;

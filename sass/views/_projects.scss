@@ -1,134 +1,109 @@
 /* projects page CSS */
 
-/* mobile grid */
+/* grid css */
 
-@media (max-width : 1200px) {
-    .projects__grid {
-        @include fadeInAnimation(1s, 0.3s);
+.projects__grid {
+    @include fadeInAnimation(1s, 0.3s);
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    max-width: 40%;
+    margin: 50px auto;
+    gap: 50px;
+
+    //extend for video size and images sizes, since both need to share the same css
+
+    %mediaSizes {
+        object-fit: cover;
+        border-radius: 5%;
+        height: 250px;
+        width: min(21vw, 400px);
+        transition: 0.2s;
+    }
+
+    &-image-container-video {
+        @extend %mediaSizes;
+    }
+
+    img {
+        @extend %mediaSizes;
+    }
+
+    p {
+        display: inline-block;
+        font-size: 25px;
+        /*disable pointer events to prevent blinking effect*/
+        pointer-events: none;
+        position: absolute;
+        top: 45%;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        text-align: center;
+        word-break: break-all;
+        transition: ease 0.2s;
+    }
+
+    /* mobile grid */
+
+    @media (max-width : 1200px) {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        gap: 50px;
-        margin-top: 50px;
-        margin-bottom: 50px;
 
         //if we use a video, then do this
+
         &-image-container-video {
-            object-fit: cover;
-            border-radius: 5%;
             width: 250px;
             height: 150px;
-            transition: 0.2s;
         }
 
         img {
-            object-fit: cover;
-            border-radius: 5%;
             width: 250px;
             height: 150px;
-            transition: 0.2s;
         }
 
         p {
-            display: inline-block;
             font-size: 15px;
-            /*disable pointer events to prevent blinking effect*/
-            pointer-events: none;
-            position: absolute;
-            top: 45%;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            text-align: center;
-            word-break: break-all;
-            transition: ease 0.2s;
         }
     }
-}
 
-/* desktop grid */
-@media (min-width : 1200px) {
-    .projects__grid {
-        @include fadeInAnimation(1s, 0.3s);
+    /* grid elements images css*/
+
+    /* set out image position to relative in order to center the text using absolute position */
+
+    &-image-container {
         position: relative;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        justify-content: center;
-        align-items: center;
-        max-width: 40%;
-        margin: 50px auto;
-        gap: 50px;
+        justify-self: center;
 
-        //if we use a video, then do this
-        &-image-container-video {
-            object-fit: cover;
-            border-radius: 5%;
-            width: min(21vw, 400px);
-            height: 250px;
-            transition: 0.2s;
+        // Define a shared style for the hover effect
+        %hover-effect {
+            transform: scale(1.2);
+            box-shadow: 0px 0px 20px 0px $boxShadowColor;
+
+            // sets the opacity of the p tag to 1 so it becomes visible
+            +p {
+                background-color: rgba(12, 12, 12, 0.805);
+                transition: ease 0.2s;
+                opacity: 1;
+            }
         }
 
-        img {
-            object-fit: cover;
-            border-radius: 5%;
-            width: min(21vw, 400px);
-            height: 250px;
-            transition: 0.2s;
+        // Apply the hover effect to images
+        img:hover {
+            @extend %hover-effect;
         }
 
-        p {
-            display: inline-block;
-            font-size: 25px;
-            /*disable pointer events to prevent blinking effect*/
-            pointer-events: none;
-            position: absolute;
-            top: 45%;
-            left: 0;
-            right: 0;
-            opacity: 0;
-            text-align: center;
-            word-break: break-all;
-            transition: ease 0.2s;
+        // Apply the hover effect to videos
+        &-video:hover {
+            @extend %hover-effect;
         }
-
     }
-
+    
     /* center the project grid item if it is alone*/
     :nth-last-child(1):nth-child(odd) {
         grid-column: 1 / span 4;
         justify-self: center;
-    }
-}
-
-/* set out position to relative in order to center the text using absolute position*/
-.projects__grid-image-container {
-
-    position: relative;
-    justify-self: center;
-
-    //hover effect for images
-    img:hover {
-        transform: scale(1.2);
-        box-shadow: 0px 0px 20px 0px $boxShadowColor;
-
-        // sets the opacity of the p tag to 1 so it becomes visible
-        +p {
-            background-color: rgba(12, 12, 12, 0.805);
-            transition: ease 0.2s;
-            opacity: 1;
-        }
-    }
-
-    //hover effect for videos
-    video:hover {
-        transform: scale(1.2);
-        box-shadow: 0px 0px 20px 0px $boxShadowColor;
-
-        // sets the opacity of the p tag to 1 so it becomes visible
-        +p {
-            background-color: rgba(12, 12, 12, 0.805);
-            transition: ease 0.2s;
-            opacity: 1;
-        }
     }
 }

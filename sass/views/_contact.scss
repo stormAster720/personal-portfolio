@@ -1,52 +1,11 @@
-/*mobile contact form*/
-
-@media (max-width: 1200px) {
-
-    .contact__form-logo {
-        display: none;
-    }
-
-    .contact__form {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-        align-content: center;
-
-
-        &-background {
-            box-shadow: 0px 0px 5px 0px #365582;
-            border-radius: 3px;
-            background-color: #242425;
-            height: auto;
-            width: 90vw;
-            margin-bottom: 50px;
-        }
-
-    }
-}
-
-/*desktop contact form*/
-@media (min-width: 720px) {
-    .contact__form {
-        display: flex;
-        justify-content: center;
-        gap: 20vw;
-
-        &-background {
-            box-shadow: 0px 0px 5px 0px #365582;
-            border-radius: 3px;
-            background-color: #242425;
-            height: auto;
-            width: 600px;
-            margin-bottom: 50px;
-        }
-
-    }
-}
+/* contact form css */
 
 .contact__form {
+    @include fadeInAnimation(1s, 0.3s);
+    display: flex;
+    justify-content: center;
+    gap: 20vw;
+
     h2 {
         margin-top: 50px;
         margin-left: 60px;
@@ -67,44 +26,66 @@
 
     /* the tab on right side for contact details*/
 
-    &-div {
-        @include fadeInAnimation(1s, 0.3s);
+    &-inner {
         border-radius: 3px;
         justify-content: center;
         align-items: center;
+
+        /* center the content inside the contact form card*/
+
+        &-wrapper {
+            display: flex;
+        }
+
+        &-background {
+            box-shadow: 0px 0px 5px 0px #365582;
+            border-radius: 3px;
+            background-color: #242425;
+            height: auto;
+            width: 600px;
+            margin-bottom: 50px;
+        }
+
+        &-inputs {
+            margin-left: 50px;
+        }
 
         h2 {
             font-size: 30px;
         }
 
-        input {
+        //extend for input and text area as they need to have the same css
+
+        %input-properties {
             display: block;
             width: 80%;
-            height: 35px;
             margin-top: 30px;
             color: white;
             background-color: #00000034;
             border-width: 1px;
+        }
+
+        input {
+            height: 35px;
+            @extend %input-properties;
         }
 
         textarea {
-            display: block;
-            width: 80%;
             height: 70px;
-            margin-top: 30px;
-            color: white;
-            background-color: #00000034;
-            border-width: 1px;
+            @extend %input-properties;
         }
     }
 
-    /* center the content inside the contact form card*/
+    /*mobile contact form*/
 
-    &-wrapper {
-        display: flex;
-    }
+    @media (max-width: 1200px) {
 
-    &-inputs {
-        margin-left: 50px;
+        &-logo {
+            display: none;
+        }
+
+        &-inner-background {
+            width: 90vw;
+        }
     }
 }

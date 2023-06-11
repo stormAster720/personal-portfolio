@@ -1,4 +1,28 @@
 /* about me page CSS */
+
+//profile picture CSS
+
+//extend for shared image properties
+
+%shared-properties {
+    object-fit: cover;
+    border-radius: 5%;
+    box-shadow: 0px 30px 50px -10px rgba(0, 0, 0, 0.7);
+}
+
+.profile-picture {
+    @include fadeInAnimation(2s, 0s);
+    @extend %shared-properties;
+    display: flex;
+    align-self: center;
+    height: min(50vw, 250px);
+    width: min(80vw, 350px);
+   
+
+}
+
+//about grid css
+
 .about__grid {
     @include fadeInAnimation(1s, 0s);
     margin-top: 50px;
@@ -7,35 +31,14 @@
     justify-content: center;
 
     img {
-        box-shadow: 0px 30px 50px -10px rgba(0, 0, 0, 0.7);
-        object-fit: cover;
-        border-radius: 5%;
+        @extend %shared-properties;
         width: min(40vw, 400px);
         height: min(30vw, 250px);
         transition: 0.2s;
     }
-}
 
-/* mobile about  grid*/
-@media (max-width : 1200px) {
-
-    .about__grid {
-        @include fadeInAnimation(1s, 0s);
+    /* mobile about  grid*/
+    @media (max-width : 1200px) {
         margin-bottom: 50px;
     }
-}
-
-//the profile picture CSS
-.profile-picture {
-    @include fadeInAnimation(2s, 0s);
-    display: flex;
-    align-self: center;
-    object-fit: cover;
-    border-radius: 5%;
-
-    height: min(50vw, 250px);
-    width: min(80vw, 350px);
-    box-shadow: 0px 30px 50px -10px rgba(0, 0, 0, 0.7);
-
-
 }

@@ -1,31 +1,24 @@
-/* desktop left aligned text container */
-@media (min-width : 1200px) {
+//left aligned text css
 
-    .leftAligned__text {
-
-        h2 {
-            @include fadeInAnimation(3s, 0s);
-            margin-top: 50px;
-            margin-left: 60px;
-            font-size: 48px;
-        }
+.leftAligned__text {
+    h2 {
+        @include fadeInAnimation(3s, 0s);
+        margin-top: 50px;
+        margin-left: 60px;
+        font-size: 48px;
     }
 
-}
+    /* mobile left aligned text container */
 
-/* mobile left aligned text container */
-@media (max-width : 1200px) {
+    @media (max-width : 1200px) {
 
-    .leftAligned__text {
-        @include fadeInAnimation(3s, 0s);
-        justify-content: center;
         display: flex;
+        justify-content: center;
 
         h2 {
 
             margin-top: 30px;
             margin-bottom: 0px;
-            font-size: 48px;
         }
     }
 }

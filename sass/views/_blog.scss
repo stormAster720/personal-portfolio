@@ -1,118 +1,115 @@
 /* blog page CSS*/
 
-/*set paragraph size for mobile blog title*/
+/* blog grid css */
 
-@media (max-width : 720px) {
+.blog__grid {
+    @include fadeInAnimation(1s, 0.3s);
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    margin-top: 100px;
+    margin-bottom: 50px;
 
-    #entries__title {
-        display: none;
-    }
-}
-
-/* desktop blog grid*/
-@media (min-width : 1200px) {
-    .blog__grid {
-        @include fadeInAnimation(1s, 0.3s);
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        margin-top: 100px;
-        margin-bottom: 50px;
-
-        &-element {
-            display: grid;
-            align-items: center;
-            justify-items: center;
-            grid-template-columns: 2fr 3fr;
-            margin-right: 300px;
-        }
-    }
-}
-
-/* mobile blog grid*/
-@media (max-width : 1200px) {
-    .blog__grid {
-        @include fadeInAnimation(1s, 0.3s);
+    //
+    &-element {
         display: grid;
-        gap: 100px;
-        margin-top: 100px;
-        margin-bottom: 50px;
+        align-items: center;
+        justify-items: center;
+        grid-template-columns: 2fr 3fr;
+        margin-right: 300px;
+
+        &-description {
+
+            //set description title size
+
+            h2 {
+                font-size: 32px;
+                margin-bottom: 15px;
+            }
+
+            p {
+                text-align: start;
+            }
+
+            //set hover effect on description button
+
+            button {
+                &:hover::after {
+                    transition: 1s;
+                    content: "→";
+                }
+            }
+        }
+
+        &-image-container {
+
+            img {
+                object-fit: cover;
+                border-radius: 5%;
+            }
+
+            //text below the image (date) css
+
+            p {
+                margin-top: 30px;
+                font-size: 20px;
+                text-align: center;
+
+                span {
+                    color: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    // mobile blog grid
+
+    @media (max-width : 1200px) {
 
         &-element {
-            margin: 0px 30px 0px 30px;
-            display: grid;
-            grid-template-rows: 2fr;
+            //center element
             text-align: center;
-        }
-    }
-}
 
-.blog__grid-element-image-container {
+            h2 {
+                text-align: center;
+            }
 
-    img {
-        object-fit: cover;
-        border-radius: 5%;
-    }
+            grid-template-columns: 2fr;
+            grid-template-rows: 2fr;
+            margin: 0px 30px 0px 30px;
 
-    /*text below the image (date)*/
+            &-description {
 
-    p {
-        margin-top: 30px;
-        font-size: 20px;
-        text-align: center;
-
-        span {
-            color: $secondaryColor;
-        }
-    }
-}
-
-/*set paragraph size for mobile blog entry title*/
-
-@media (max-width : 1200px) {
-
-    .blog__grid-element-description {
-        p {
-            text-align: start;
-        }
-
-        h2 {
-            font-size: 25px;
-            margin-bottom: 15px;
-        }
-    }
-}
-
-/*set paragraph size for desktop blog entry title*/
-
-@media (min-width : 1200px) {
-
-    .blog__grid-element-description {
-        h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
-    }
-}
-
-/* button effects */
-
-.blog__grid-element-description {
-    button {
-        &:hover::after {
-            transition: 1s;
-            content: "→";
+                h2 {
+                    font-size: 25px;
+                }
+            }
         }
     }
 }
 
 //Styles for blog pagination buttons
 .pagination {
+    
     .page-item {
-        a {
+
+        //extend for default a colors
+
+        %defaultColors {
             color: white;
             background-color: $primaryColor;
             border-color: $primaryColor;
+        }
+
+        a {
+            @extend %defaultColors;
+
+            //style for disabled button
+            &.disabled {
+                a {
+                    @extend %defaultColors;
+                }
+            }
 
             &:focus {
                 color: white;
@@ -125,15 +122,6 @@
                 color: white;
                 border-color: $btnGlowColor;
                 background-color: $btnGlowColor;
-            }
-        }
-
-        //style for disabled button
-        &.disabled {
-            a {
-                color: white;
-                border-color: $primaryColor;
-                background-color: $primaryColor;
             }
         }
     }
