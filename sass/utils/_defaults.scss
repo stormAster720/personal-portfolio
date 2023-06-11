@@ -74,7 +74,7 @@ span {
     }
 }
 
-    /* set cta button default styles */
+/* set cta button default styles */
 .cta__button {
     text-align: center;
     font-size: 15px;
@@ -91,7 +91,7 @@ span {
     @include buttonHoverEffect(200px, 50px);
 }
 
- /* set standard button default styles */
+/* set standard button default styles */
 .redirection__button {
     text-align: center;
     font-size: 15px;
@@ -108,8 +108,8 @@ span {
     @include buttonHoverEffect(200px, 60px);
 }
 
- /* set contact form send button default styles */
- .send__button {
+/* set contact form send button default styles */
+.send__button {
     text-align: center;
     font-size: 15px;
     border-style: outset;
@@ -125,21 +125,21 @@ span {
     @include buttonHoverEffect(200px, 50px);
 }
 
- /* set blog button default styles */
+/* set blog button default styles */
 .blog__button {
-     text-align: center;
-     font-size: 15px;
-     border-style: outset;
-     border-color: $secondaryColor;
-     color: white;
-     background-color: $btnNormalColor;
-     border-radius: 15px;
-     margin-top: 20px;
-     height: 50px;
-     width: 170px;
-     transition: ease 0.2s;
-     @include slideDownAnimation(2s, 0s);
-     @include buttonHoverEffect(200px, 50px);
+    text-align: center;
+    font-size: 15px;
+    border-style: outset;
+    border-color: $secondaryColor;
+    color: white;
+    background-color: $btnNormalColor;
+    border-radius: 15px;
+    margin-top: 20px;
+    height: 50px;
+    width: 170px;
+    transition: ease 0.2s;
+    @include slideDownAnimation(2s, 0s);
+    @include buttonHoverEffect(200px, 50px);
 }
 
 /* bootstrap default buttons css*/
@@ -165,4 +165,3 @@ span {
     width: 80%;
     background-color: $secondaryColor;
 }
-

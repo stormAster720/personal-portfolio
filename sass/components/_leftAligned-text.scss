@@ -1,15 +1,13 @@
-
-
 /* desktop left aligned text container */
 @media (min-width : 1200px) {
 
     .leftAligned__text {
 
-        h2{
-        @include fadeInAnimation(3s, 0s);
-        margin-top: 50px;
-        margin-left: 60px;
-        font-size: 48px;
+        h2 {
+            @include fadeInAnimation(3s, 0s);
+            margin-top: 50px;
+            margin-left: 60px;
+            font-size: 48px;
         }
     }
 

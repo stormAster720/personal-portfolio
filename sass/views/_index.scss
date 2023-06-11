@@ -18,6 +18,7 @@
         justify-content: center;
         height: 350px;
     }
+
     .hero__container-sideImage-container {
         display: none;
     }
@@ -44,8 +45,8 @@
     .hero__container-sideImage-container {
         position: relative;
         overflow: visible;
-      //3D test
-      /*
+        //3D test
+        /*
         transform-style: preserve-3d;
         perspective: 100em;
         transform: translate3d(0px, 80px, 0px) rotate3d(-0.1, -0.7, 0, -60deg);
@@ -53,14 +54,15 @@
         border-width: 10px;
       */
         width: 53%;
-        
+
         box-shadow: -10px 0px 20px 10px rgba(0, 0, 0, 0.222);
         z-index: -1;
-        transform: skewX(-16deg) translateX(60px);;
+        transform: skewX(-16deg) translateX(60px);
+        ;
 
         img {
-            transform: skewX(10deg)  translateX(-40px) ;
-    
+            transform: skewX(10deg) translateX(-40px);
+
         }
     }
 }
@@ -106,7 +108,7 @@
     .app__icons-grid {
 
         //css for app grid background for custom JS
-        transition : "background-image 1s ease";
+        transition: "background-image 1s ease";
         background-size: min(50vw, 250px);
         background-repeat: no-repeat;
         background-position: center;
@@ -120,10 +122,10 @@
         justify-items: center;
 
         img {
-        display: flex;
-        object-fit: contain;
-        width: 110px;
-        height: 110px;
+            display: flex;
+            object-fit: contain;
+            width: 110px;
+            height: 110px;
         }
     }
 
@@ -136,7 +138,7 @@
         @include fadeInAnimation(1s, 0s);
 
         //css for app grid background for custom JS
-        transition : "background-image 1s ease";
+        transition: "background-image 1s ease";
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
