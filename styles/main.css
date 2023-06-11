@@ -862,6 +862,7 @@ span {
   color: white;
   background-color: rgba(0, 0, 0, 0.2039215686);
   border-width: 1px;
+  padding: 10px;
 }
 .contact__form-inner input {
   height: 35px;
